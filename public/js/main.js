@@ -109,46 +109,49 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Manejo de navegación activa
+  // Manejar navegación activa
   function setActiveNavLink() {
     const navLinks = document.querySelectorAll('.nav-link');
-    const currentPath = window.location.pathname.toLowerCase().replace(/\\/g, '/').split('?')[0];
-    
+    const currentPath = window.location.pathname.toLowerCase().replace(/\\/g, '/').split('/').pop(); // Obtiene solo el último segmento de la ruta
+    const isRoot = currentPath === '' || currentPath === 'index.html' || currentPath === 'dynamo';
+
     // Limpiar todas las clases activas
     navLinks.forEach(link => {
       link.classList.remove('active', 'no-transition');
     });
     
     // Normalizar rutas para comparación
-    const isRoot = currentPath.endsWith('/dynamo/index.html') || currentPath.endsWith('/dynamo/');
-    const isNoticiasGeneral = currentPath.endsWith('/pages/noticias_general.html');
-    const isNoticia = currentPath.endsWith('/pages/noticia.html');
-    const isSobreNosotros = currentPath.endsWith('/pages/sobre-nosotros.html');
-    const isEquipos = currentPath.endsWith('/pages/equipos.html');
-    const isContacto = currentPath.endsWith('/pages/contacto.html');
-    const isTienda = currentPath.endsWith('/pages/tienda.html');
-
     let activeLink = null;
 
     if (isRoot) {
       activeLink = document.querySelector('.nav-link[href="./index.html"]') || document.querySelector('.nav-link[href="../index.html"]');
-    } else if (isNoticiasGeneral || isNoticia) {
-      activeLink = document.querySelector('.nav-link[href="./pages/noticias_general.html"]') || document.querySelector('.nav-link[href="../pages/noticias_general.html"]');
-      activeLink?.classList.add('no-transition');
-      setTimeout(() => activeLink?.classList.remove('no-transition'), 50);
-    } else if (isSobreNosotros) {
-      activeLink = document.querySelector('.nav-link[href="./pages/sobre-nosotros.html"]') || document.querySelector('.nav-link[href="../pages/sobre-nosotros.html"]');
-    } else if (isEquipos) {
-      activeLink = document.querySelector('.nav-link[href="./pages/equipos.html"]') || document.querySelector('.nav-link[href="../pages/equipos.html"]');
-    } else if (isContacto) {
-      activeLink = document.querySelector('.nav-link[href="./pages/contacto.html"]') || document.querySelector('.nav-link[href="../pages/contacto.html"]');
-    } else if (isTienda) {
-      activeLink = document.querySelector('.nav-link[href="./pages/tienda.html"]') || document.querySelector('.nav-link[href="../pages/tienda.html"]');
+    } else {
+      const pageName = currentPath.replace('.html', ''); // Elimina .html si existe
+      switch (pageName) {
+        case 'sobre-nosotros':
+          activeLink = document.querySelector('.nav-link[href="./pages/sobre-nosotros.html"]') || document.querySelector('.nav-link[href="../pages/sobre-nosotros.html"]');
+          break;
+        case 'equipos':
+          activeLink = document.querySelector('.nav-link[href="./pages/equipos.html"]') || document.querySelector('.nav-link[href="../pages/equipos.html"]');
+          break;
+        case 'noticias_general':
+          activeLink = document.querySelector('.nav-link[href="./pages/noticias_general.html"]') || document.querySelector('.nav-link[href="../pages/noticias_general.html"]');
+          break;
+        case 'tienda':
+          activeLink = document.querySelector('.nav-link[href="./pages/tienda.html"]') || document.querySelector('.nav-link[href="../pages/tienda.html"]');
+          break;
+        case 'contacto':
+          activeLink = document.querySelector('.nav-link[href="./pages/contacto.html"]') || document.querySelector('.nav-link[href="../pages/contacto.html"]');
+          break;
+      }
     }
 
     if (activeLink) {
       activeLink.classList.add('active');
+      activeLink.classList.add('no-transition');
+      setTimeout(() => activeLink.classList.remove('no-transition'), 50);
     } else {
+      log(`No se encontró enlace activo para la ruta: ${currentPath}`);
     }
   }
 
