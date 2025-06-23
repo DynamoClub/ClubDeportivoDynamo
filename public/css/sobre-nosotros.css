@@ -1,0 +1,884 @@
+/* ========================================
+   ESTILOS SOBRE NOSOTROS - PROFESIONAL
+   ======================================== */
+
+/* Variables adicionales para esta sección */
+:root {
+  --section-bg: #ffffff;
+  --section-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 12px 40px rgba(255, 107, 53, 0.15);
+}
+
+/* Contenedor principal mejorado */
+.sobre-nosotros {
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: var(--gradient-bg);
+  min-height: 100vh;
+  position: relative;
+}
+
+.sobre-nosotros::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: var(--gradient-section);
+  z-index: 1;
+  border-radius: 0 0 50px 50px;
+}
+
+/* Título principal */
+.sobre-nosotros h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 3.5rem;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background: #020202;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.sobre-nosotros h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--gradient-orange);
+  border-radius: 2px;
+}
+
+/* Secciones principales */
+.historia, 
+.mision-vision-valores, 
+.torneos, 
+.sedes,
+.equipo {
+  margin-bottom: 4rem;
+  background: var(--section-bg);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: var(--section-shadow);
+  position: relative;
+  z-index: 2;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.historia::before,
+.mision-vision-valores::before,
+.torneos::before,
+.sedes::before,
+.equipo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--gradient-orange);
+  z-index: 1;
+}
+
+.historia:hover,
+.mision-vision-valores:hover,
+.torneos:hover,
+.sedes:hover,
+.equipo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos de sección */
+.historia h2, 
+.mision-vision-valores h2, 
+.torneos h2, 
+.sedes h2,
+.equipo h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.historia h2::before,
+.mision-vision-valores h2::before,
+.torneos h2::before,
+.sedes h2::before,
+.equipo h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 40px;
+  background: var(--gradient-orange);
+  border-radius: 3px;
+}
+
+/* Párrafos mejorados */
+.historia p,
+.mision-vision-valores p,
+.torneos p,
+.sedes p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  position: relative;
+}
+
+.historia p:first-of-type::first-letter {
+  font-size: 4rem;
+  font-weight: 700;
+  float: left;
+  line-height: 1;
+  margin: 0.1rem 0.8rem 0 0;
+  color: var(--primary-orange);
+  font-family: serif;
+}
+
+/* ========================================
+   ESTILOS MISIÓN, VISIÓN Y VALORES (TARJETAS)
+   ======================================== */
+
+.mision-vision-valores {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.02) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mvv-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: var(--card-shadow);
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.mvv-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.mvv-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+.mvv-card:hover::before {
+  opacity: 1;
+}
+
+.mvv-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.mvv-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-orange);
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+.mvv-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+/* Estilos específicos para cada tarjeta */
+.mision-card {
+  border-top: 4px solid #3498db;
+}
+
+.vision-card {
+  border-top: 4px solid #e74c3c;
+}
+
+.valores-card {
+  border-top: 4px solid #f39c12;
+}
+
+/* Lista de valores mejorada */
+.valores-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.valor-item {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 107, 53, 0.05) 100%);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.valor-item:hover {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(255, 107, 53, 0.08) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+}
+
+/* ========================================
+   ESTILOS TORNEOS MEJORADOS
+   ======================================== */
+
+.torneos {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.02) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.torneos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.torneo-item {
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: center;
+}
+
+.torneo-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-orange);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.torneo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(255, 107, 53, 0.2);
+}
+
+.torneo-item:hover::before {
+  transform: scaleX(1);
+}
+
+/* ========================================
+   ESTILOS SEDES CON MAPAS
+   ======================================== */
+
+.sedes {
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.02) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.sedes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.sede-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.sede-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.sede-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(46, 204, 113, 0.3);
+}
+
+.sede-card:hover::before {
+  opacity: 1;
+}
+
+.sede-info {
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.sede-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.sede-ubicacion {
+  color: var(--primary-orange);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.sede-info p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.sede-info .open-map-link {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--gradient-orange);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  z-index: 2;
+}
+
+.sede-info .open-map-link:hover {
+  background: linear-gradient(135deg, var(--dark-orange) 0%, #d94f1a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.sede-mapa {
+  position: relative;
+  height: 200px;
+  border-top: 1px solid var(--border-light);
+}
+
+.sede-mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.sede-card:hover .sede-mapa iframe {
+  filter: brightness(1.1) saturate(1.1);
+}
+
+/* ========================================
+   ESTILOS EQUIPO Y MODAL
+   ======================================== */
+
+/* Filtro de equipo mejorado */
+.filtro-equipo {
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.filtro-equipo select {
+  padding: 1rem 2rem;
+  border: 2px solid var(--border-light);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  background: var(--white);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  min-width: 200px;
+  box-shadow: var(--card-shadow);
+}
+
+.filtro-equipo select:hover {
+  border-color: var(--primary-orange);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
+}
+
+.filtro-equipo select:focus {
+  outline: none;
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+/* Grid de equipo */
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Tarjetas de miembros mejoradas */
+.miembro-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  max-width: 320px;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.miembro-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.miembro-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+.miembro-card:hover::before {
+  opacity: 1;
+}
+
+.miembro-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.miembro-card:hover img {
+  transform: scale(1.05);
+}
+
+.miembro-card h3 {
+  font-size: 1.4rem;
+  margin: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+.miembro-card p {
+  margin: 0 1.5rem 1.5rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================================
+   MODAL MEJORADO
+   ======================================== */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+  overflow-y: auto; /* Permitir scroll del modal completo */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  position: relative;
+  background: var(--white);
+  margin: 2rem auto;
+  padding: 0;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: slideIn 0.3s ease;
+  /* Altura máxima para permitir scroll */
+  max-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideIn {
+  from { 
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Contenedor de imagen mejorado */
+.modal-image-container {
+  position: relative;
+  width: 100%;
+  height: 350px; /* Altura fija para la imagen */
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Información del modal con scroll */
+.modal-info {
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto; /* Scroll solo en el contenido */
+  max-height: calc(100vh - 450px); /* Altura máxima del contenido */
+}
+
+.modal-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modal-info p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-info p:first-of-type {
+  color: var(--primary-orange);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cerrar:hover {
+  background: rgba(255, 107, 53, 0.9);
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN PARA MODAL
+   ======================================== */
+
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 1rem auto;
+    width: 95%;
+    max-height: calc(100vh - 2rem);
+    border-radius: 16px;
+  }
+  
+  .modal-image-container {
+    height: 280px; /* Imagen más pequeña en mobile */
+  }
+  
+  .modal-info {
+    padding: 1.5rem;
+    max-height: calc(100vh - 350px);
+  }
+  
+  .modal-info h3 {
+    font-size: 1.6rem;
+  }
+  
+  .modal-info p {
+    font-size: 1rem;
+  }
+  
+  .cerrar {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    margin: 0.5rem auto;
+    width: 98%;
+    max-height: calc(100vh - 1rem);
+    border-radius: 12px;
+  }
+  
+  .modal-image-container {
+    height: 250px;
+  }
+  
+  .modal-info {
+    padding: 1rem;
+    max-height: calc(100vh - 320px);
+  }
+  
+  .modal-info h3 {
+    font-size: 1.4rem;
+  }
+  
+  .modal-info p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* Mejoras adicionales para UX */
+.modal-info::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-info::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.modal-info::-webkit-scrollbar-thumb {
+  background: rgba(255, 107, 53, 0.3);
+  border-radius: 3px;
+}
+
+.modal-info::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 107, 53, 0.5);
+}
+
+.cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.cerrar:hover {
+  background: rgba(255, 107, 53, 0.8);
+  transform: scale(1.1);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .sobre-nosotros {
+    padding: 2rem 1rem;
+  }
+  
+  .sobre-nosotros h1 {
+    font-size: 2.5rem;
+  }
+  
+  .historia, 
+  .mision-vision-valores, 
+  .torneos, 
+  .sedes,
+  .equipo {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .historia h2, 
+  .mision-vision-valores h2, 
+  .torneos h2, 
+  .sedes h2,
+  .equipo h2 {
+    font-size: 1.8rem;
+  }
+  
+  .mvv-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .sedes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .torneos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    width: 95%;
+  }
+  
+  .modal-info {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-nosotros h1 {
+    font-size: 2rem;
+  }
+  
+  .historia p:first-of-type::first-letter {
+    font-size: 3rem;
+  }
+  
+  .mvv-card {
+    padding: 1.5rem;
+  }
+  
+  .valores-lista {
+    justify-content: flex-start;
+  }
+}
+
+/* Estados de carga y ocultos */
+.hidden {
+  display: none !important;
+}
+
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Animaciones adicionales */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.miembro-card:active {
+  animation: pulse 0.2s ease;
+}
+
+/* Mejoras de accesibilidad */
+.miembro-card:focus,
+.torneo-item:focus,
+.mvv-card:focus,
+.sede-card:focus {
+  outline: 3px solid rgba(255, 107, 53, 0.5);
+  outline-offset: 2px;
+}
