@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const anoNacimientoSelect = document.getElementById('ano-nacimiento');
     
     // Número de WhatsApp
-    const whatsappNumber = '573148130955';
+    const whatsappNumber = '573126723778';
     
     // Inicializar la página
     init();

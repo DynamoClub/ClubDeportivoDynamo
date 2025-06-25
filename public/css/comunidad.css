@@ -1,0 +1,910 @@
+/* ========================================
+   SECCIÓN DE RESEÑAS - CLUB DEPORTIVO DYNAMO
+   ======================================== */
+
+/* Contenedor principal de la comunidad */
+.comunidad {
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 15px;
+  box-shadow: var(--shadow-main);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.comunidad h1 {
+  font-size: 2.5rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+  font-weight: 900;
+}
+
+.comunidad h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-orange);
+  border-radius: 2px;
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: var(--gray-dark);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================================
+   SECCIÓN DE RESEÑAS EXISTENTES
+   ======================================== */
+
+.reseñas {
+  margin-bottom: 3rem;
+}
+
+.reseñas h2 {
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.reseñas h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: var(--gradient-orange);
+  border-radius: 2px;
+}
+
+.reseñas-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Estado de carga */
+.cargando {
+  text-align: center;
+  color: var(--gray-dark);
+  font-size: 1.1rem;
+  padding: 2rem;
+  background: var(--gray-light);
+  border-radius: 10px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite alternate;
+}
+
+.sin-reseñas {
+  text-align: center;
+  color: var(--gray-dark);
+  font-size: 1.1rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  border: 2px dashed var(--primary-orange);
+  opacity: 0.8;
+}
+
+/* Tarjetas de reseñas */
+.resena-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--primary-orange);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.resena-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-orange), var(--bright-orange));
+  border-radius: 0 12px 0 50px;
+  opacity: 0.1;
+}
+
+.resena-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-left-color: var(--bright-orange);
+}
+
+.resena-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.resena-info h4 {
+  font-size: 1.2rem;
+  color: var(--black);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.resena-tipo {
+  background: var(--gradient-orange);
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.resena-calificacion {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.estrella-display {
+  color: #ddd;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.estrella-display.llena {
+  color: #ffa500;
+  text-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+.resena-titulo {
+  font-size: 1.1rem;
+  color: var(--black);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.resena-comentario {
+  color: var(--gray-dark);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.resena-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.85rem;
+}
+
+.resena-fecha {
+  color: var(--gray-dark);
+  font-weight: 500;
+}
+
+.resena-recomendacion {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.resena-recomendacion.si {
+  background: #d4edda;
+  color: #155724;
+}
+
+.resena-recomendacion.tal {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.resena-recomendacion.no {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* ========================================
+   SEPARADOR VISUAL
+   ======================================== */
+
+.separador-seccion {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: linear-gradient(135deg, var(--primary-orange), var(--bright-orange));
+  border-radius: 15px;
+  color: var(--white);
+  margin: 3rem 0 2rem 0;
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.separador-seccion::before {
+  content: '⭐';
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.2;
+  left: 10%;
+  top: 20%;
+  animation: float-star-1 6s infinite ease-in-out;
+}
+
+.separador-seccion::after {
+  content: '⭐';
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.2;
+  right: 15%;
+  bottom: 30%;
+  animation: float-star-2 8s infinite ease-in-out reverse;
+}
+
+@keyframes float-star-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(20px, -15px) rotate(180deg); }
+}
+
+@keyframes float-star-2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-25px, 10px) rotate(-180deg); }
+}
+
+.separador-seccion h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.separador-seccion p {
+  font-size: 1rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================================
+   VERIFICACIÓN DE SESIÓN
+   ======================================== */
+
+.sesion-info {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sesion-info.activa {
+  background: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.sesion-info p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ========================================
+   FORMULARIO DE RESEÑAS
+   ======================================== */
+
+.formulario-reseñas {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+  display: none; /* Se muestra con JavaScript */
+}
+
+.formulario-reseñas h3 {
+  font-size: 1.8rem;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.formulario-reseñas h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: var(--gradient-orange);
+  border-radius: 2px;
+}
+
+.form-personalizado {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.1);
+}
+
+.form-help {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--gray-dark);
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+/* Sistema de estrellas para calificación */
+.estrellas-rating {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0.5rem 0;
+}
+
+.estrella {
+  font-size: 2rem;
+  color: #ddd;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.estrella:hover,
+.estrella.activa {
+  color: #ffa500;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
+}
+
+/* Radio buttons personalizados */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.radio-option:hover {
+  background: #f8f9fa;
+}
+
+.radio-option input[type="radio"] {
+  display: none;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom {
+  border-color: var(--primary-orange);
+  background: var(--primary-orange);
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: var(--white);
+  border-radius: 50%;
+}
+
+/* Disclaimer */
+.form-disclaimer {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.form-disclaimer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #856404;
+}
+
+/* Botón de envío */
+.btn-enviar {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  background: var(--gradient-orange);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-enviar:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+  background: var(--bright-orange);
+}
+
+.btn-enviar:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-loading::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--white);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   MENSAJES DE RESULTADO
+   ======================================== */
+
+.mensaje-resultado {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.mensaje-resultado.error {
+  background: #f8d7da;
+  border: 1px solid #f1aeb5;
+  color: #721c24;
+}
+
+.mensaje-resultado:not(.error) {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.icono-exito,
+.icono-error {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto 1rem auto;
+}
+
+.icono-exito {
+  background: #28a745;
+  color: var(--white);
+}
+
+.icono-error {
+  background: #dc3545;
+  color: var(--white);
+}
+
+.mensaje-resultado h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.mensaje-resultado p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.btn-nueva-resena,
+.btn-reintentar {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-nueva-resena {
+  background: var(--gradient-orange);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+}
+
+.btn-nueva-resena:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+.btn-reintentar {
+  background: #dc3545;
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.btn-reintentar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+  background: #c82333;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets (768px y menos) */
+@media (max-width: 768px) {
+  .comunidad {
+    padding: 1.5rem;
+  }
+
+  .comunidad h1 {
+    font-size: 2rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .reseñas-contenedor {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .separador-seccion {
+    padding: 2rem 1rem;
+    margin: 2rem 0 1.5rem 0;
+  }
+
+  .separador-seccion h2 {
+    font-size: 1.5rem;
+  }
+
+  .formulario-reseñas {
+    padding: 1.5rem;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+}
+
+/* Móviles (480px y menos) */
+@media (max-width: 480px) {
+  .comunidad {
+    padding: 1rem;
+  }
+
+  .comunidad h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .resena-card {
+    padding: 1rem;
+  }
+
+  .resena-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .resena-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .separador-seccion {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .separador-seccion h2 {
+    font-size: 1.3rem;
+  }
+
+  .formulario-reseñas {
+    padding: 1rem;
+  }
+
+  .estrellas-rating {
+    justify-content: center;
+  }
+
+  .estrella {
+    font-size: 1.8rem;
+  }
+
+  .btn-enviar {
+    font-size: 1rem;
+    padding: 0.9rem 1.5rem;
+  }
+}
+
+/* Móviles muy pequeños (320px y menos) */
+@media (max-width: 320px) {
+  .comunidad {
+    padding: 0.8rem;
+  }
+
+  .comunidad h1 {
+    font-size: 1.6rem;
+  }
+
+  .intro {
+    font-size: 0.9rem;
+  }
+
+  .resena-card {
+    padding: 0.8rem;
+  }
+
+  .formulario-reseñas {
+    padding: 0.8rem;
+  }
+
+  .estrella {
+    font-size: 1.6rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animaciones adicionales */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resena-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.resena-card:nth-child(1) { animation-delay: 0.1s; }
+.resena-card:nth-child(2) { animation-delay: 0.2s; }
+.resena-card:nth-child(3) { animation-delay: 0.3s; }
+.resena-card:nth-child(4) { animation-delay: 0.4s; }
+
+
+/* ========================================
+   CONTROLES DE PAGINACIÓN
+   ======================================== */
+
+.paginacion-controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.btn-paginacion {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background: var(--gradient-orange);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-paginacion:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+  background: var(--bright-orange);
+}
+
+.btn-paginacion:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  background: var(--gray-light);
+  box-shadow: none;
+}
+
+.btn-paginacion::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.btn-paginacion:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.info-pagina {
+  font-size: 1rem;
+  color: var(--gray-dark);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: var(--white);
+  border-radius: 15px;
+  border: 1px solid #e9ecef;
+}
+
+/* Responsive Design para Paginación */
+@media (max-width: 768px) {
+  .paginacion-controles {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-paginacion {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .info-pagina {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .paginacion-controles {
+    gap: 0.5rem;
+    padding: 0.8rem 0;
+  }
+
+  .btn-paginacion {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .info-pagina {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .paginacion-controles {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .btn-paginacion {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .info-pagina {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+}

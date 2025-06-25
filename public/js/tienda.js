@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imagenPorDefecto = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjVGNUY1Ii8+CjxwYXRoIGQ9Ik0xMjUgMTAwSDE3NVYxNTBIMTI1VjEwMFoiIGZpbGw9IiNEMEQwRDAiLz4KPHBhdGggZD0iTTEwMCAxNzVIMjAwVjIwMEgxMDBWMTc1WiIgZmlsbD0iI0QwRDBEMCIvPgo8Y2lyY2xlIGN4PSIxMzciIGN5PSIxMTMiIHI9IjgiIGZpbGw9IiNBMEEwQTAiLz4KPHRleHQgeD0iMTUwIiB5PSIyNDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SW1hZ2VuIG5vIGRpc3BvbmlibGU8L3RleHQ+Cjwvc3ZnPgo=';
 
     // Número de WhatsApp
-    const whatsappNumber = '573148130955';
+    const whatsappNumber = '573126723778';
 
     // === FUNCIONES DE FORMATEO Y UTILIDADES ===
 
