@@ -135,7 +135,6 @@ function cambiarPagina(direccion) {
     
     // Validar límites
     if (nuevaPagina < 1 || nuevaPagina > totalPaginas) {
-        console.log(`Página ${nuevaPagina} fuera de rango (1-${totalPaginas})`);
         return;
     }
     
@@ -330,10 +329,6 @@ function enviarResena(e) {
             recomendacion: form.recomendacion.value,
             fecha: new Date().toISOString().split('T')[0]
         };
-
-        console.log('=== NUEVA RESEÑA ENVIADA AL FORMULARIO DE GOOGLE ===');
-        console.log(JSON.stringify(nuevaReseña, null, 2));
-        console.log('=== COPIA Y PEGA EN reseñas.js TRAS REVISAR ===');
 
         const tempForm = document.createElement('form');
         tempForm.method = 'POST';
