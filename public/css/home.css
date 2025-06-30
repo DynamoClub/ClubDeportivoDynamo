@@ -55,6 +55,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
+  text-transform: uppercase;
 }
 
 .hero p {
@@ -790,3 +791,4 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   background: var(--bright-orange);
 }
+

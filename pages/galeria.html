@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Club Deportivo Dynamo - Noticias</title>
-  <meta name="description" content="Todas las noticias del Club Deportivo Dynamo: partidos, entrenamientos, torneos y eventos.">
-  <meta name="keywords" content="Club Deportivo Dynamo, fútbol, noticias, partidos, torneos">
+  <title>Club Deportivo Dynamo - Galería</title>
+  <meta name="description" content="Explora los mejores momentos del Club Deportivo Dynamo en nuestra galería de fotos y videos.">
+  <meta name="keywords" content="Club Deportivo Dynamo, galería, fútbol, mejores momentos, fotos, videos">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Club Deportivo Dynamo">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Club Deportivo Dynamo">
-  <meta property="og:title" content="Club Deportivo Dynamo - Noticias">
-  <meta property="og:description" content="Todas las noticias del Club Deportivo Dynamo: partidos, entrenamientos, torneos y eventos.">
-  <meta property="og:image" content="./public/img/logo.webp">
+  <meta property="og:title" content="Club Deportivo Dynamo - Galería">
+  <meta property="og:description" content="Explora los mejores momentos del Club Deportivo Dynamo en nuestra galería de fotos y videos.">
+  <meta property="og:image" content="../public/img/logo.webp">
   <meta property="og:url" content="">
-
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Club Deportivo Dynamo - Noticias">
-  <meta name="twitter:description" content="Todas las noticias del Club Deportivo Dynamo: partidos, entrenamientos, torneos y eventos.">
-  <meta name="twitter:image" content="./public/img/logo.webp">
+  <meta name="twitter:title" content="Club Deportivo Dynamo - Galería">
+  <meta name="twitter:description" content="Explora los mejores momentos del Club Deportivo Dynamo en nuestra galería de fotos y videos.">
+  <meta name="twitter:image" content="../public/img/logo.webp">
   <link rel="stylesheet" href="../public/css/styles.css">
-  <link rel="stylesheet" href="../public/css/noticiasGeneral.css">
+  <link rel="stylesheet" href="../public/css/galeria.css">
   <link rel="icon" href="../public/img/logo.webp">
 </head>
 <body>
-
-  <!-- Navbar lateral -->
+  
+<!-- Navbar lateral -->
 <nav class="sidebar" id="sidebar">
   <!-- Patrón de fútbol de fondo -->
   <div class="sidebar-pattern"></div>
@@ -90,11 +90,8 @@
       <span class="nav-text">Comunidad</span>
       <div class="nav-glow"></div>
     </a></li>
-
-
-    
-            <!-- Nueva sección de Galería -->
-    <li><a href="../pages/galeria.html" class="nav-link">
+    <!-- Sección de Galería -->
+    <li><a href="../pages/galeria.html" class="nav-link active">
       <div class="nav-icon">
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"/>
@@ -103,7 +100,6 @@
       <span class="nav-text">Galería</span>
       <div class="nav-glow"></div>
     </a></li>
-
     <li><a href="../pages/tienda.html" class="nav-link">
       <div class="nav-icon">
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -151,45 +147,56 @@
   </div>
 </nav>
 
-  <!-- Overlay para móvil -->
-  <div class="overlay" id="overlay"></div>
+<!-- Overlay para móvil -->
+<div class="overlay" id="overlay"></div>
 
-  <!-- Botón hamburguesa -->
-  <button class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+<!-- Botón hamburguesa -->
+<button class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 
-  <!-- Contenido principal -->
-  <main class="main-content">
-    <section class="noticias-general">
-      <h1>Noticias del Club Deportivo Dynamo</h1>
-      <!-- Formulario de filtros -->
-      <div class="filtros-noticias">
-        <input type="text" id="filtro-titulo" placeholder="Buscar por título...">
-        <select id="filtro-categoria">
-          <option value="">Todas las categorías</option>
-          <option value="Partido">Partido</option>
-          <option value="Entrenamiento">Entrenamiento</option>
-          <option value="Torneo">Torneo</option>
-          <option value="Evento">Evento</option>
-        </select>
-        <button id="limpiar-filtros">Limpiar</button>
-      </div>
-      <!-- Contenedor de noticias -->
-      <div id="noticias-grid" class="noticias-grid"></div>
-      <!-- Paginación -->
-      <div class="paginacion">
-        <button id="anterior-pagina">Anterior</button>
-        <span id="pagina-actual">Página 1</span>
-        <button id="siguiente-pagina">Siguiente</button>
-      </div>
-    </section>
-  </main>
+<main class="main-content">
+    <div class="gallery-container">
+        <h1>Mejores Momentos del Club Deportivo Dynamo</h1>
+        <p>Revive la pasión, la emoción y los logros inolvidables del Club Deportivo Dynamo a través de nuestra galería de imágenes y videos. Desde jugadas épicas en la cancha hasta celebraciones con nuestra comunidad, aquí encontrarás los instantes que han marcado nuestra historia. Filtra por imágenes o videos para explorar los recuerdos que hacen latir el corazón de nuestro club.</p>
+        
+        <!-- Filtros -->
+        <div class="gallery-filters">
+            <button class="gallery-filter-btn active" data-filter="all">Todos</button>
+            <button class="gallery-filter-btn" data-filter="image">Imágenes</button>
+            <button class="gallery-filter-btn" data-filter="video">Videos</button>
+        </div>
+        
+        <!-- Grid de la galería -->
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Contenido dinámico se carga aquí -->
+        </div>
+        
+        <!-- Paginación -->
+        <div class="gallery-pagination" id="pagination">
+            <div class="gallery-pagination-controls" id="paginacion-controles" style="display: none;">
+                <button class="gallery-page-btn" id="btn-anterior">← Anterior</button>
+                <span class="gallery-page-info" id="info-pagina">Página 1 de 1</span>
+                <button class="gallery-page-btn" id="btn-siguiente">Siguiente →</button>
+            </div>
+        </div>
+    </div>
+</main>
 
-  <script src="../public/js/main.js"></script>
-  <script src="../public/js/noticias_general.js"></script>
-  <script src="../data/noticias.js"></script>
+<!-- Modal para vista completa -->
+<div class="gallery-modal" id="modal">
+    <div class="gallery-modal-content">
+        <span class="gallery-modal-close">×</span>
+        <div class="gallery-modal-media" id="modalMedia">
+            <!-- Contenido del modal -->
+        </div>
+    </div>
+</div>
+
+<script src="../public/js/main.js"></script>
+<script src="../public/js/galeria.js"></script>
+<script src="../data/galeria.js"></script>
 </body>
 </html>

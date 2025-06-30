@@ -19,6 +19,7 @@
   text-align: center;
   position: relative;
   font-weight: 900;
+  text-transform: uppercase;
 }
 
 .comunidad h1::after {
