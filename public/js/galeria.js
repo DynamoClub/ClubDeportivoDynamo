@@ -17,7 +17,8 @@ class DynamoGallery {
             currentFilter: 'all',
             totalPages: 0,
             isLoading: false,
-            isModalOpen: false
+            isModalOpen: false,
+            currentModalIndex: 0
         };
 
         // Cache de elementos DOM
@@ -68,7 +69,7 @@ class DynamoGallery {
     }
 
     /**
-     * Carga de datos con validación
+     * Carga de datos con validación y ordenamiento
      */
     async loadData() {
         try {
@@ -78,6 +79,10 @@ class DynamoGallery {
             }
 
             this.state.data = this.validateData(galeriaData);
+            
+            // Ordenar por ID de más reciente a más viejo (descendente)
+            this.state.data.sort((a, b) => b.id - a.id);
+            
             this.state.filteredData = [...this.state.data];
             this.updateTotalPages();
 
@@ -257,6 +262,9 @@ class DynamoGallery {
             this.state.filteredData = this.state.data.filter(item => item.type === filter);
         }
         
+        // Mantener el ordenamiento por ID descendente después del filtrado
+        this.state.filteredData.sort((a, b) => b.id - a.id);
+        
         this.updateTotalPages();
     }
 
@@ -374,11 +382,14 @@ class DynamoGallery {
      */
     createVideoHTML(item) {
         const poster = item.poster ? `data-poster="${item.poster}"` : '';
+        const srcMp4 = typeof item.src === 'object' ? item.src.mp4 : item.src;
+        const srcWebm = typeof item.src === 'object' ? item.src.webm : null;
+        
         return `
             <div class="gallery-media-container">
                 <video ${poster} preload="none" muted class="gallery-video">
-                    <source data-src="${item.src.webm || item.src}" type="video/webm">
-                    <source data-src="${item.src.mp4 || item.src}" type="video/mp4">
+                    ${srcWebm ? `<source data-src="${srcWebm}" type="video/webm">` : ''}
+                    <source data-src="${srcMp4}" type="video/mp4">
                     Tu navegador no soporta video.
                 </video>
                 <div class="gallery-play-button text-version" aria-hidden="true">▶</div>
@@ -439,6 +450,9 @@ class DynamoGallery {
 
         this.state.isModalOpen = true;
         this.state.currentModalItem = item;
+        
+        // Encontrar el índice del elemento en los datos filtrados
+        this.state.currentModalIndex = this.state.filteredData.findIndex(dataItem => dataItem.id === item.id);
 
         // Limpiar contenido anterior
         this.elements.modalMedia.innerHTML = '';
@@ -488,19 +502,27 @@ class DynamoGallery {
                 video.autoplay = true;
             }
 
-            // Agregar fuentes
-            if (item.src.webm) {
-                const sourceWebm = document.createElement('source');
-                sourceWebm.src = item.src.webm;
-                sourceWebm.type = 'video/webm';
-                video.appendChild(sourceWebm);
-            }
+            // Manejar diferentes formatos de src
+            if (typeof item.src === 'object') {
+                if (item.src.webm) {
+                    const sourceWebm = document.createElement('source');
+                    sourceWebm.src = item.src.webm;
+                    sourceWebm.type = 'video/webm';
+                    video.appendChild(sourceWebm);
+                }
 
-            if (item.src.mp4) {
-                const sourceMp4 = document.createElement('source');
-                sourceMp4.src = item.src.mp4;
-                sourceMp4.type = 'video/mp4';
-                video.appendChild(sourceMp4);
+                if (item.src.mp4) {
+                    const sourceMp4 = document.createElement('source');
+                    sourceMp4.src = item.src.mp4;
+                    sourceMp4.type = 'video/mp4';
+                    video.appendChild(sourceMp4);
+                }
+            } else {
+                // Si es string simple
+                const source = document.createElement('source');
+                source.src = item.src;
+                source.type = 'video/mp4';
+                video.appendChild(source);
             }
 
             return video;
@@ -534,11 +556,27 @@ class DynamoGallery {
     }
 
     /**
-     * Navegar en modal (próxima funcionalidad)
+     * Navegar en modal con navegación funcional
      */
     navigateModal(direction) {
-        // Implementar navegación entre elementos en modal
-        console.log('Modal navigation:', direction);
+        if (!this.state.isModalOpen) return;
+
+        const newIndex = this.state.currentModalIndex + direction;
+        
+        // Validar límites
+        if (newIndex < 0 || newIndex >= this.state.filteredData.length) {
+            return;
+        }
+
+        // Actualizar índice y abrir nuevo item
+        this.state.currentModalIndex = newIndex;
+        const newItem = this.state.filteredData[newIndex];
+        
+        // Actualizar contenido del modal
+        this.state.currentModalItem = newItem;
+        this.elements.modalMedia.innerHTML = '';
+        const mediaElement = this.createModalContent(newItem);
+        this.elements.modalMedia.appendChild(mediaElement);
     }
 
     /**
