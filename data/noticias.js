@@ -109,5 +109,15 @@ const noticiasData = [
     "description": "El Club Deportivo Dynamo llevó a 50 deportistas de las categorías Sub-11, Sub-12 y Sub-13 Elites a una jornada deportiva en Pereira, en la sede de Sócrates Fútbol Club.",
     "image": "./public/img/noticias/Evento Dynamo vs SocratesFC Junio 30.jpg",
     "content": "El 30 de junio de 2025, el Club Deportivo Dynamo envió una delegación de 50 deportistas de las categorías Sub-11, Sub-12 y Sub-13 Elites a una jornada deportiva en Pereira, realizada en la sede deportiva de Sócrates Fútbol Club. Este encuentro fortaleció lazos para futuros proyectos y destacó el compromiso del club con el desarrollo de sus talentos. ¡Seguimos #formandoGrandespromesas!"
-}
+},
+    {
+    "id": "12",
+    "title": "Sub-15 Dynamo | Torneo Nacional Difútbol ⚽🔥",
+    "url": "sub-15-torneo-nacional-1-julio-2025-dynamo",
+    "date": "2025-07-01",
+    "category": "Partido",
+    "description": "El equipo Sub-15 de Club Deportivo Dynamo sigue en la lucha por la clasificación en el Torneo Nacional de Difútbol, sumando tres puntos vitales.",
+    "image": "./public/img/noticias/sub-15-torneo-nacional-1-julio-2025-dynamo.jpg",
+    "content": "𝗧𝗢𝗥𝗡𝗘𝗢 𝗡𝗔𝗖𝗜𝗢𝗡𝗔𝗟 | @difutbol_oficial\n\nEstamos en la pelea… Dynamo Sub-15 se impuso 2-0 en una vibrante jornada y queda a tan solo dos puntos de la zona de clasificación en el Torneo Nacional.\n\n🏆 Resultado: Dynamo 2️⃣ - 0️⃣ Rival\n\n📋 DT: David Palta\n📋 AT: Giovany Ortiz\n\nLa plantilla continúa demostrando carácter y compromiso en cada fecha. 📸 @jsphotoograph\n\n¡Seguimos #formandoGrandespromesas!"
+  }
 ];
