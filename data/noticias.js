@@ -114,7 +114,7 @@ const noticiasData = [
     "id": "12",
     "title": "Sub-15 Dynamo | Torneo Nacional Difútbol ⚽🔥",
     "url": "sub-15-torneo-nacional-1-julio-2025-dynamo",
-    "date": "2025-07-01",
+    "date": "2025-07-02",
     "category": "Partido",
     "description": "El equipo Sub-15 de Club Deportivo Dynamo sigue en la lucha por la clasificación en el Torneo Nacional de Difútbol, sumando tres puntos vitales.",
     "image": "./public/img/noticias/sub-15-torneo-nacional-1-julio-2025-dynamo.jpg",
