@@ -130,4 +130,24 @@ const noticiasData = [
       "image": "./public/img/noticias/Semana_dulce_categoria_sub_9_A_dynamo.jpg",
       "content": "¡𝗦𝗘𝗠𝗔𝗡𝗔 𝗗𝗨𝗟𝗖𝗘! 🍬⚽ @bonbonbumoficial\n\nNuestra Categoría Sub-9 Élite participa en la copa más dulce de Cali: Copa Bon Bon Bum, compitiendo un año por debajo de su categoría. Hasta ahora, han sumado dos empates y una victoria, y queda una fecha por disputar.\n\n🏆 Último resultado: Dynamo 7️⃣ - 2️⃣ Johao FC\n\n⚽ Goleadores:\n- Jeycob ⚽\n- Cantillo ⚽\n- Santiago ⚽\n- Karim ⚽\n- Jeremy ⚽\n- Yerlish ⚽\n- Levi ⚽\n\n👏 Gran trabajo de todo el equipo y cuerpo técnico, demostrando talento y actitud en cada partido.\n\n¡Seguimos #formandopromesas🧡🖤!"
     },
+      {
+    "id": "14",
+    "title": "Dynamo | Julio llegó con mucho trabajo 🏋️‍♂️🔥",
+    "url": "julio-llego-con-mucho-trabajo-2-julio-2025-dynamo",
+    "date": "2025-07-03",
+    "category": "Entrenamiento",
+    "description": "El Club Deportivo Dynamo arrancó julio con sesiones de trabajo físico y acondicionamiento para todas sus categorías.",
+    "image": "./public/img/noticias/julio_llego_con_mucho_trabajo_dynamo.jpg",
+    "content": "JULIO LLEGÓ CON MUCHO TRABAJO 🏋️‍♂️🔥\n\n@caf_club.deportivodynamo\n\nNuestros jugadores arrancaron el mes con intensas sesiones de acondicionamiento físico, trabajo de fuerza y resistencia, como parte de su proceso formativo.\n\n💪 Ejercicios de fuerza, barras, cuerdas, pesas y abdominales, todo con el objetivo de fortalecer y preparar a nuestros deportistas para los próximos desafíos.\n\n📸 @caf_club.deportivodynamo\n\n#formandograndespromesas 🧡🖤"
+  },
+    {
+    "id": "15",
+    "title": "Sub-14 Dynamo | Liga Vallecaucana ⚽🔥",
+    "url": "sub-14-liga-vallecaucana-3-julio-2025-dynamo",
+    "date": "2025-07-03",
+    "category": "Partido",
+    "description": "Gran triunfo de nuestra categoría Sub-14 en la Liga Vallecaucana, venciendo en un partidazo a la cantera del Deportivo Cali.",
+    "image": "./public/img/noticias/sub_14_pitazo_final_dynamo.jpg",
+    "content": "𝗥𝗘𝗦𝗨𝗟𝗧𝗔𝗗𝗢𝗦 𝗟𝗜𝗚𝗔 𝗩𝗔𝗟𝗟𝗘𝗖𝗔𝗨𝗖𝗔𝗡𝗔 ⚽🔥\n\nNuestra Categoría Sub-14 logró una importante victoria en la Liga Vallecaucana tras un vibrante partido frente a la cantera del Deportivo Cali.\n\n🏆 Resultado: Dynamo 4️⃣ - 3️⃣ Deportivo Cali Cantera B\n\n📋 DT: Oscar Aaron Lucumí\n\n⚽ Goleadores:\n- Samuel Vásquez ⚽⚽⚽\n- Preciado ⚽\n\n👏 Gran esfuerzo y entrega de todo el equipo. ¡A seguir así!\n\n📸 Diseñador: @jsphotoograph\n\n#formandograndespromesas 🧡🖤"
+  },
 ];
