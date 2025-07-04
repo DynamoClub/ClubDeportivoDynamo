@@ -119,5 +119,15 @@ const noticiasData = [
     "description": "El equipo Sub-15 de Club Deportivo Dynamo sigue en la lucha por la clasificación en el Torneo Nacional de Difútbol, sumando tres puntos vitales.",
     "image": "./public/img/noticias/sub-15-torneo-nacional-1-julio-2025-dynamo.jpg",
     "content": "𝗧𝗢𝗥𝗡𝗘𝗢 𝗡𝗔𝗖𝗜𝗢𝗡𝗔𝗟 | @difutbol_oficial\n\nEstamos en la pelea… Dynamo Sub-15 se impuso 2-0 en una vibrante jornada y queda a tan solo dos puntos de la zona de clasificación en el Torneo Nacional.\n\n🏆 Resultado: Dynamo 2️⃣ - 0️⃣ Rival\n\n📋 DT: David Palta\n📋 AT: Giovany Ortiz\n\nLa plantilla continúa demostrando carácter y compromiso en cada fecha. 📸 @jsphotoograph\n\n¡Seguimos #formandoGrandespromesas!"
-  }
+  },
+      {
+      "id": "13",
+      "title": "Sub-9A Dynamo | Copa Bon Bon Bum 🍭⚽",
+      "url": "semana-dulce-categoria-sub-9a-dynamo-3-julio-2025",
+      "date": "2025-07-03",
+      "category": "Partido",
+      "description": "Nuestra Categoría Sub-9 A sigue destacándose en la Copa Bon Bon Bum, compitiendo un año por debajo y sumando importantes resultados.",
+      "image": "./public/img/noticias/Semana_dulce_categoria_sub_9_A_dynamo.jpg",
+      "content": "¡𝗦𝗘𝗠𝗔𝗡𝗔 𝗗𝗨𝗟𝗖𝗘! 🍬⚽ @bonbonbumoficial\n\nNuestra Categoría Sub-9 Élite participa en la copa más dulce de Cali: Copa Bon Bon Bum, compitiendo un año por debajo de su categoría. Hasta ahora, han sumado dos empates y una victoria, y queda una fecha por disputar.\n\n🏆 Último resultado: Dynamo 7️⃣ - 2️⃣ Johao FC\n\n⚽ Goleadores:\n- Jeycob ⚽\n- Cantillo ⚽\n- Santiago ⚽\n- Karim ⚽\n- Jeremy ⚽\n- Yerlish ⚽\n- Levi ⚽\n\n👏 Gran trabajo de todo el equipo y cuerpo técnico, demostrando talento y actitud en cada partido.\n\n¡Seguimos #formandopromesas🧡🖤!"
+    },
 ];
