@@ -89,5 +89,12 @@ const equipoData = [
     "role": "Entrenador",
     "description": "Yeison Mosquera es un formador entusiasta y dedicado al desarrollo integral de los jóvenes deportistas. Con estudios en Técnico en Entr Hilda de Mar y Entrenamiento y Preparación Física, dirige la categoría Sub-06 en el Club Deportivo Dynamo.",
     "image": "../public/img/equipo/YeisonMosqueraEntrenador.webp"
-  }
+  },
+    {
+  "id": "14",
+  "name": "Johan Hurtado",
+  "role": "Diseñador / Fotógrafo",
+  "description": "Johan Hurtado, Tecnólogo en Gestión Deportiva y talentoso diseñador, aporta creatividad, identidad y profesionalismo a la imagen institucional de Club Deportivo Dynamo. Su compromiso permite proyectar con fuerza el espíritu y los valores del club.",
+  "image": "../public/img/equipo/JohanHurtadoDiseñador.png"
+}
 ];
