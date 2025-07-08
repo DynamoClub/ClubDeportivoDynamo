@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('noticia-image').src = adjustedImage;
         document.getElementById('noticia-image').alt = noticia.title;
         document.getElementById('noticia-date').textContent = formatDateToSpanish(noticia.date);
-        document.getElementById('noticia-content').textContent = noticia.content;
+        document.getElementById('noticia-content').innerHTML = noticia.content;
         log(`Noticia cargada: ${noticia.title}`);
         loadRelatedNoticias(noticiasData, noticiaUrl);
       } else {
