@@ -8,7 +8,7 @@ const reseñasData = {
             titulo: "Excelente experiencia para mi hijo",
             comentario: "Mi hijo ha crecido mucho tanto deportiva como personalmente gracias al club. Los entrenadores son muy dedicados y el ambiente es sano y motivador.",
             recomendacion: "Sí",
-            fecha: "2023-06-20"
+            fecha: "2025-06-25"
         },
         {
             id: 2,
@@ -28,7 +28,7 @@ const reseñasData = {
             titulo: "Gran ambiente deportivo",
             comentario: "He visto a mi sobrino crecer en este club y ha sido muy positivo para él. Buenas instalaciones y excelente trato de los entrenadores.",
             recomendacion: "Sí",
-            fecha: "2024-11-10"
+            fecha: "2025-06-25"
         },
         {
             id: 4,
@@ -38,7 +38,7 @@ const reseñasData = {
             titulo: "Buen club, pero hay cosas por mejorar",
             comentario: "La experiencia general ha sido buena, pero creo que podrían mejorar los horarios de entrenamiento y la comunicación con los padres.",
             recomendacion: "Tal vez",
-            fecha: "2023-03-18"
+            fecha: "2025-06-25"
         },
         {
             id: 5,
@@ -48,7 +48,7 @@ const reseñasData = {
             titulo: "El mejor club para formarse",
             comentario: "Desde que ingresé al club, no solo mejoré como jugador, sino que aprendí valores como el respeto, la disciplina y el trabajo en equipo. Muy agradecido con todo el cuerpo técnico.",
             recomendacion: "Sí",
-            fecha: "2024-08-05"
+            fecha: "2025-06-25"
         }
     ]
 };
