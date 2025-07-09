@@ -21,7 +21,7 @@ const productosData = [
     "id": 3,
     "name": "Uniforme Oficial Dynamo - Equipación 3",
     "description": "Equipación de jugador profesional",
-   "price": 100000,
+    "price": 100000,
     "category": "equipamiento",
     "image": "../public/img/tienda/uniforme_dynamo_3.png",
     "discount": 0

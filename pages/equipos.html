@@ -75,6 +75,15 @@
       <span class="nav-text">Equipos</span>
       <div class="nav-glow"></div>
     </a></li>
+    <li><a href="../pages/jugadores-destacados.html" class="nav-link">
+      <div class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      </div>
+      <span class="nav-text">Jugadores Destacados</span>
+      <div class="nav-glow"></div>
+    </a></li>
     <li><a href="../pages/noticias_general.html" class="nav-link">
       <div class="nav-icon">
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -84,8 +93,6 @@
       <span class="nav-text">Noticias</span>
       <div class="nav-glow"></div>
     </a></li>
-
-
     <li><a href="../pages/comunidad.html" class="nav-link">
       <div class="nav-icon">
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -95,10 +102,6 @@
       <span class="nav-text">Comunidad</span>
       <div class="nav-glow"></div>
     </a></li>
-
-
-    
-            <!-- Nueva sección de Galería -->
     <li><a href="../pages/galeria.html" class="nav-link">
       <div class="nav-icon">
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -108,9 +111,6 @@
       <span class="nav-text">Galería</span>
       <div class="nav-glow"></div>
     </a></li>
-
-
-
     <li><a href="../pages/tienda.html" class="nav-link">
       <div class="nav-icon">
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -120,11 +120,6 @@
       <span class="nav-text">Tienda</span>
       <div class="nav-glow"></div>
     </a></li>
-
-
-
-
-
     <li><a href="../pages/contacto.html" class="nav-link">
       <div class="nav-icon">
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -174,194 +169,48 @@
 </button>
 
   <!-- Contenido principal -->
-<!-- Contenido principal -->
-<main class="main-content">
-    <!-- Sección de encabezado del club -->
-    <section class="club-header">
-        <div class="club-intro">
-            <h1>Club Deportivo Dynamo</h1>
-            <p class="club-description">
-                Nuestro club se dedica a la formación integral de jóvenes futbolistas, desarrollando no solo habilidades técnicas y tácticas, sino también valores como el trabajo en equipo, la disciplina y el respeto. Con categorías desde Sub-6 hasta Sub-16, incluyendo una academia especializada de arqueros, ofrecemos un programa completo de desarrollo deportivo.
-            </p>
-        </div>
-    </section>
+  <main class="main-content">
+      <!-- Sección de encabezado del club -->
+      <section class="club-header">
+          <div class="club-intro">
+              <h1>Club Deportivo Dynamo</h1>
+              <p class="club-description">
+                  Nuestro club se dedica a la formación integral de jóvenes futbolistas, fomentando habilidades técnicas, tácticas y valores como el trabajo en equipo, la disciplina y el respeto. Con aproximadamente 30 categorías distribuidas en nuestras dos sedes, Córdoba y Vegas, incluyendo una academia especializada de arqueros, ofrecemos un programa completo de desarrollo deportivo para todas las edades.
+              </p>
+          </div>
+      </section>
 
-    <!-- Sección de categorías -->
-    <section class="categorias-section">
-        <h2 class="section-title">Nuestras Categorías</h2>
-        
-        <div class="categorias-grid">
-            <!-- Categoría Sub-6 -->
-            <div class="categoria-card" data-categoria="sub6">
-                <div class="categoria-image">
-                    <img src="../public/img/categorias/sub6_dynamo.webp" alt="Categoría Sub-6" />
-                    <div class="categoria-overlay">
-                        <span class="categoria-name">Sub-6</span>
-                    </div>
-                </div>
-                <div class="categoria-info">
-                    <h3>Categoría Sub-6</h3>
-                    <p class="categoria-description">
-                        Iniciación al fútbol a través del juego. Los niños de esta categoría desarrollan habilidades básicas de coordinación, equilibrio y trabajo en equipo mediante actividades lúdicas y divertidas.
-                    </p>
-                    <div class="habilidades-desarrollar">
-                        <h4>Habilidades a Desarrollar:</h4>
-                        <ul>
-                            <li>Coordinación motriz básica</li>
-                            <li>Socialización y trabajo en equipo</li>
-                            <li>Disciplina y seguimiento de instrucciones</li>
-                            <li>Contacto inicial con el balón</li>
-                        </ul>
-                    </div>
-                    <button class="ver-logros-btn" data-target="sub6">Ver Logros</button>
-                </div>
-            </div>
+      <!-- Sección de categorías -->
+      <section class="categorias-section">
+          <h2 class="section-title">Nuestras Categorías</h2>
+          
+          <div class="categorias-grid" id="categoriasGrid">
+              <!-- Categorías se cargarán dinámicamente con JavaScript -->
+          </div>
 
-            <!-- Categoría Sub-8 -->
-            <div class="categoria-card" data-categoria="sub8">
-                <div class="categoria-image">
-                    <img src="../public/img/categorias/sub8_dynamo.webp" alt="Categoría Sub-8" />
-                    <div class="categoria-overlay">
-                        <span class="categoria-name">Sub-8</span>
-                    </div>
-                </div>
-                <div class="categoria-info">
-                    <h3>Categoría Sub-8</h3>
-                    <p class="categoria-description">
-                        Desarrollo de habilidades técnicas básicas. Los jugadores aprenden fundamentos del fútbol como pases cortos, control del balón y posicionamiento básico en el campo.
-                    </p>
-                    <div class="habilidades-desarrollar">
-                        <h4>Habilidades a Desarrollar:</h4>
-                        <ul>
-                            <li>Técnica básica de pase y recepción</li>
-                            <li>Control y dominio del balón</li>
-                            <li>Nociones básicas de posición</li>
-                            <li>Desarrollo de la velocidad de reacción</li>
-                        </ul>
-                    </div>
-                    <button class="ver-logros-btn" data-target="sub8">Ver Logros</button>
-                </div>
-            </div>
+          <!-- Paginación -->
+          <div class="categorias-pagination" id="categoriasPagination">
+              <div class="categorias-pagination-controls" id="categorias-paginacion-controles" style="display: none;">
+                  <button class="categorias-page-btn" id="categorias-btn-anterior">← Anterior</button>
+                  <span class="categorias-page-info" id="categorias-info-pagina">Página 1 de 1</span>
+                  <button class="categorias-page-btn" id="categorias-btn-siguiente">Siguiente →</button>
+              </div>
+          </div>
+      </section>
 
-            <!-- Categoría Sub-12 -->
-            <div class="categoria-card" data-categoria="sub12">
-                <div class="categoria-image">
-                    <img src="../public/img/categorias/sub12_dynamo.webp" alt="Categoría Sub-12" />
-                    <div class="categoria-overlay">
-                        <span class="categoria-name">Sub-12</span>
-                    </div>
-                </div>
-                <div class="categoria-info">
-                    <h3>Categoría Sub-12</h3>
-                    <p class="categoria-description">
-                        Perfeccionamiento técnico y introducción a la táctica. Los jugadores desarrollan habilidades más complejas y comienzan a entender conceptos tácticos básicos del juego.
-                    </p>
-                    <div class="habilidades-desarrollar">
-                        <h4>Habilidades a Desarrollar:</h4>
-                        <ul>
-                            <li>Técnica avanzada individual</li>
-                            <li>Conceptos tácticos básicos</li>
-                            <li>Juego en equipo y comunicación</li>
-                            <li>Resistencia y acondicionamiento físico</li>
-                        </ul>
-                    </div>
-                    <button class="ver-logros-btn" data-target="sub12">Ver Logros</button>
-                </div>
-            </div>
-
-            <!-- Categoría Sub-15 -->
-            <div class="categoria-card" data-categoria="sub15">
-                <div class="categoria-image">
-                    <img src="../public/img/categorias/sub15_dynamo.webp" alt="Categoría Sub-15" />
-                    <div class="categoria-overlay">
-                        <span class="categoria-name">Sub-15</span>
-                    </div>
-                </div>
-                <div class="categoria-info">
-                    <h3>Categoría Sub-15</h3>
-                    <p class="categoria-description">
-                        Desarrollo táctico avanzado y especialización por posiciones. Los jugadores perfeccionan su técnica individual y desarrollan una comprensión profunda del juego colectivo.
-                    </p>
-                    <div class="habilidades-desarrollar">
-                        <h4>Habilidades a Desarrollar:</h4>
-                        <ul>
-                            <li>Especialización por posiciones</li>
-                            <li>Táctica avanzada y sistemas de juego</li>
-                            <li>Liderazgo y toma de decisiones</li>
-                            <li>Preparación física específica</li>
-                        </ul>
-                    </div>
-                    <button class="ver-logros-btn" data-target="sub15">Ver Logros</button>
-                </div>
-            </div>
-
-            <!-- Categoría Sub-16 -->
-            <div class="categoria-card" data-categoria="sub16">
-                <div class="categoria-image">
-                    <img src="../public/img/categorias/sub16_dynamo.webp" alt="Categoría Sub-16" />
-                    <div class="categoria-overlay">
-                        <span class="categoria-name">Sub-16</span>
-                    </div>
-                </div>
-                <div class="categoria-info">
-                    <h3>Categoría Sub-16</h3>
-                    <p class="categoria-description">
-                        Preparación para el fútbol juvenil y amateur. Los jugadores desarrollan un alto nivel técnico-táctico y se preparan para dar el salto a categorías superiores.
-                    </p>
-                    <div class="habilidades-desarrollar">
-                        <h4>Habilidades a Desarrollar:</h4>
-                        <ul>
-                            <li>Perfeccionamiento técnico-táctico</li>
-                            <li>Mentalidad competitiva</li>
-                            <li>Preparación para fútbol amateur</li>
-                            <li>Disciplina profesional</li>
-                        </ul>
-                    </div>
-                    <button class="ver-logros-btn" data-target="sub16">Ver Logros</button>
-                </div>
-            </div>
-
-            <!-- Categoría Arqueros -->
-            <div class="categoria-card" data-categoria="arqueros">
-                <div class="categoria-image">
-                    <img src="../public/img/categorias/arquero_dynamo.webp" alt="Categoría Arqueros" />
-                    <div class="categoria-overlay">
-                        <span class="categoria-name">Arqueros</span>
-                    </div>
-                </div>
-                <div class="categoria-info">
-                    <h3>Arqueros</h3>
-                    <p class="categoria-description">
-                        Especialización completa en la posición de arquero. Programa integral que abarca desde técnicas básicas hasta aspectos psicológicos específicos de esta posición.
-                    </p>
-                    <div class="habilidades-desarrollar">
-                        <h4>Habilidades a Desarrollar:</h4>
-                        <ul>
-                            <li>Técnica de atajada y posicionamiento</li>
-                            <li>Juego con los pies y distribución</li>
-                            <li>Agilidad y reflejos específicos</li>
-                            <li>Fortaleza mental y liderazgo</li>
-                        </ul>
-                    </div>
-                    <button class="ver-logros-btn" data-target="arqueros">Ver Logros</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal de logros -->
-    <div id="logros-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-header">
-                <h2 id="modal-title">Logros de la Categoría</h2>
-            </div>
-            <div class="modal-body" id="modal-logros-content">
-                <!-- El contenido se generará dinámicamente con JavaScript -->
-            </div>
-        </div>
-    </div>
-</main>
+      <!-- Modal de logros -->
+      <div id="logros-modal" class="modal">
+          <div class="modal-content">
+              <span class="close">×</span>
+              <div class="modal-header">
+                  <h2 id="modal-title">Logros de la Categoría</h2>
+              </div>
+              <div class="modal-body" id="modal-logros-content">
+                  <!-- El contenido se generará dinámicamente con JavaScript -->
+              </div>
+          </div>
+      </div>
+  </main>
 
   <script src="../public/js/main.js"></script>
   <script src="../public/js/equipos.js"></script>
