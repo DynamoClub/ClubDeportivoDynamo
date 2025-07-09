@@ -1,0 +1,502 @@
+/* Variables adicionales para esta sección */
+:root {
+  --section-bg: #ffffff;
+  --section-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 12px 40px rgba(255, 107, 53, 0.15);
+}
+
+/* Contenedor principal */
+.jugadores-destacados {
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: var(--gradient-bg);
+  min-height: 100vh;
+  position: relative;
+}
+
+.jugadores-destacados::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: var(--gradient-section);
+  z-index: 1;
+  border-radius: 0 0 50px 50px;
+}
+
+/* Título principal */
+.jugadores-destacados h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 3.5rem;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background: #020202;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.jugadores-destacados h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--gradient-orange);
+  border-radius: 2px;
+}
+
+/* Secciones principales */
+.intro,
+.jugadores {
+  margin-bottom: 4rem;
+  background: var(--section-bg);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: var(--section-shadow);
+  position: relative;
+  z-index: 2;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.intro::before,
+.jugadores::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--gradient-orange);
+  z-index: 1;
+}
+
+.intro:hover,
+.jugadores:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos de sección */
+.intro h2,
+.jugadores h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.intro h2::before,
+.jugadores h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 40px;
+  background: var(--gradient-orange);
+  border-radius: 3px;
+}
+
+/* Subtítulos */
+.intro h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Párrafos */
+.intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  position: relative;
+}
+
+.intro p:first-of-type::first-letter {
+  font-size: 4rem;
+  font-weight: 700;
+  float: left;
+  line-height: 1;
+  margin: 0.1rem 0.8rem 0 0;
+  color: var(--primary-orange);
+  font-family: serif;
+}
+
+/* Filtro de jugadores */
+.filtro-jugadores {
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.filtro-jugadores select {
+  padding: 1rem 2rem;
+  border: 2px solid var(--border-light);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  background: var(--white);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  min-width: 200px;
+  box-shadow: var(--card-shadow);
+}
+
+.filtro-jugadores select:hover {
+  border-color: var(--primary-orange);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
+}
+
+.filtro-jugadores select:focus {
+  outline: none;
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+/* Grid de jugadores */
+.jugadores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Tarjetas de jugadores */
+.jugador-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  max-width: 320px;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.jugador-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.jugador-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+.jugador-card:hover::before {
+  opacity: 1;
+}
+
+.jugador-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.jugador-card:hover img {
+  transform: scale(1.05);
+}
+
+.jugador-card h3 {
+  font-size: 1.4rem;
+  margin: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+.jugador-card p {
+  margin: 0 1.5rem 1.5rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+  overflow-y: auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  position: relative;
+  background: var(--white);
+  margin: 2rem auto;
+  padding: 0;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: slideIn 0.3s ease;
+  max-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideIn {
+  from { 
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-image-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.modal-info {
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 450px);
+}
+
+.modal-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modal-info p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-info p:first-of-type {
+  color: var(--primary-orange);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cerrar:hover {
+  background: rgba(255, 107, 53, 0.9);
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .jugadores-destacados {
+    padding: 2rem 1rem;
+  }
+  
+  .jugadores-destacados h1 {
+    font-size: 2.5rem;
+  }
+  
+  .intro,
+  .jugadores {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .intro h2,
+  .jugadores h2 {
+    font-size: 1.8rem;
+  }
+  
+  .intro h3 {
+    font-size: 1.6rem;
+  }
+  
+  .jugadores-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-content {
+    margin: 1rem auto;
+    width: 95%;
+    max-height: calc(100vh - 2rem);
+    border-radius: 16px;
+  }
+  
+  .modal-image-container {
+    height: 280px;
+  }
+  
+  .modal-info {
+    padding: 1.5rem;
+    max-height: calc(100vh - 350px);
+  }
+  
+  .modal-info h3 {
+    font-size: 1.6rem;
+  }
+  
+  .modal-info p {
+    font-size: 1rem;
+  }
+  
+  .cerrar {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jugadores-destacados h1 {
+    font-size: 2rem;
+  }
+  
+  .intro p:first-of-type::first-letter {
+    font-size: 3rem;
+  }
+  
+  .modal-content {
+    margin: 0.5rem auto;
+    width: 98%;
+    max-height: calc(100vh - 1rem);
+    border-radius: 12px;
+  }
+  
+  .modal-image-container {
+    height: 250px;
+  }
+  
+  .modal-info {
+    padding: 1rem;
+    max-height: calc(100vh - 320px);
+  }
+  
+  .modal-info h3 {
+    font-size: 1.4rem;
+  }
+  
+  .modal-info p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* Scrollbar para modal */
+.modal-info::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-info::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.modal-info::-webkit-scrollbar-thumb {
+  background: rgba(255, 107, 53, 0.3);
+  border-radius: 3px;
+}
+
+.modal-info::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 107, 53, 0.5);
+}
+
+/* Animaciones y accesibilidad */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.jugador-card:active {
+  animation: pulse 0.2s ease;
+}
+
+.jugador-card:focus {
+  outline: 3px solid rgba(255, 107, 53, 0.5);
+  outline-offset: 2px;
+}
