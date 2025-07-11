@@ -94,7 +94,7 @@ const equipoData = [
   "id": "14",
   "name": "Johan Hurtado",
   "role": "Diseñador / Fotógrafo",
-  "description": "Johan Hurtado, Tecnólogo en Gestión Deportiva y talentoso diseñador, aporta creatividad, identidad y profesionalismo a la imagen institucional de Club Deportivo Dynamo. Su compromiso permite proyectar con fuerza el espíritu y los valores del club.",
+  "description": "Joan Hurtado, Tecnólogo en Gestión Deportiva y talentoso diseñador, aporta creatividad, identidad y profesionalismo a la imagen institucional de Club Deportivo Dynamo. Su compromiso permite proyectar con fuerza el espíritu y los valores del club.",
   "image": "../public/img/equipo/JohanHurtadoDiseñador.png"
 }
 ];
