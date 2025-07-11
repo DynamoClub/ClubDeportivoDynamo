@@ -86,7 +86,7 @@ const equipoData = [
   {
     "id": "13",
     "name": "Yeison Mosquera",
-    "role": "Formador",
+    "role": "Entrenador",
     "description": "Yeison Mosquera es Técnico en Entrenamiento y Preparación Física, encargado de formar y dirigir la categoría Sub-06 en el Club Deportivo Dynamo. Comprometido con el desarrollo técnico, formativo y personal de los más pequeños del club.",
     "image": "../public/img/equipo/YeisonMosqueraEntrenador.webp"
   },
