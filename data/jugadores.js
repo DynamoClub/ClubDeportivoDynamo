@@ -42,9 +42,9 @@ const jugadoresData = [
   {
   "id": "6",
   "name": "Dilan Bonilla",
-  "position": "Por definir",
+  "position": "Defensa",
   "club": "Alianza Valledupar",
-  "description": "Dilan Bonilla, delantero con formación en las categorías juveniles del Club Deportivo Dynamo, se destaca actualmente en la categoría 2008 de Alianza Valledupar. Reconocido por su velocidad, desequilibrio y capacidad goleadora, sigue dejando en alto el sello Dynamo en el fútbol nacional juvenil.",
+  "description": "Dilan Bonilla, Defensa con formación en las categorías juveniles del Club Deportivo Dynamo, se destaca actualmente en la categoría 2008 de Alianza Valledupar.",
   "image": "../public/img/jugadores/dilan-bonilla.jpg"
 },
 {
