@@ -882,3 +882,148 @@
   outline: 3px solid rgba(255, 107, 53, 0.5);
   outline-offset: 2px;
 }
+
+
+
+
+
+/* ========================================
+   ESTILOS IMAGEN HISTORIA
+   ======================================== */
+
+.historia-imagen-container {
+  margin: 2.5rem 0;
+  position: relative;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.historia-imagen-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.historia-imagen-container:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+.historia-imagen-container:hover::before {
+  opacity: 1;
+}
+
+.historia-imagen {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center top; /* Cambiado para mostrar mejor la parte superior */
+  transition: transform 0.4s ease;
+  position: relative;
+  z-index: 2;
+  display: block; /* Asegura que se comporte como bloque */
+}
+
+/* Alternativa si quieres que se ajuste completamente sin cortar */
+.historia-imagen.fit-contain {
+  object-fit: contain;
+  background-color: #f5f5f5; /* Color de fondo si la imagen no llena todo el espacio */
+}
+
+/* Alternativa si quieres que llene todo el espacio sin distorsión */
+.historia-imagen.fit-fill {
+  object-fit: fill;
+}
+
+.historia-imagen-container:hover .historia-imagen {
+  transform: scale(1.02);
+}
+
+.historia-imagen-caption {
+  padding: 2rem;
+  background: var(--white);
+  position: relative;
+  z-index: 3;
+}
+
+.historia-imagen-caption p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  text-align: center;
+  font-style: italic;
+}
+
+.historia-imagen-caption strong {
+  color: var(--primary-orange);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Responsive para la imagen */
+@media (max-width: 768px) {
+  .historia-imagen-container {
+    margin: 2rem 0;
+  }
+  
+  .historia-imagen {
+    height: 300px;
+  }
+  
+  .historia-imagen-caption {
+    padding: 1.5rem;
+  }
+  
+  .historia-imagen-caption p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .historia-imagen-container {
+    margin: 1.5rem 0;
+    border-radius: 16px;
+  }
+  
+  .historia-imagen {
+    height: 250px;
+  }
+  
+  .historia-imagen-caption {
+    padding: 1rem;
+  }
+  
+  .historia-imagen-caption p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+.historia-imagen-caption b {
+  background: var(--gradient-orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Fallback para navegadores que no soportan background-clip */
+@supports not (-webkit-background-clip: text) {
+  .historia-imagen-caption b {
+    color: var(--primary-orange);
+    background: none;
+  }
+}
