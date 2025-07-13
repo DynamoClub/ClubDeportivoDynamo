@@ -146,16 +146,6 @@
   position: relative;
 }
 
-.historia p:first-of-type::first-letter {
-  font-size: 4rem;
-  font-weight: 700;
-  float: left;
-  line-height: 1;
-  margin: 0.1rem 0.8rem 0 0;
-  color: var(--primary-orange);
-  font-family: serif;
-}
-
 /* ========================================
    ESTILOS MISIÓN, VISIÓN Y VALORES (TARJETAS)
    ======================================== */
@@ -882,9 +872,6 @@
   outline: 3px solid rgba(255, 107, 53, 0.5);
   outline-offset: 2px;
 }
-
-
-
 
 
 /* ========================================
