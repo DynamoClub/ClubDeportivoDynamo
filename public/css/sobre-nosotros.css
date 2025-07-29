@@ -830,11 +830,7 @@
   .sobre-nosotros h1 {
     font-size: 2rem;
   }
-  
-  .historia p:first-of-type::first-letter {
-    font-size: 3rem;
-  }
-  
+   
   .mvv-card {
     padding: 1.5rem;
   }
