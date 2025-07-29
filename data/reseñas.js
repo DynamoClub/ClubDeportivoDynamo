@@ -50,5 +50,26 @@ const reseñasData = {
             recomendacion: "Sí",
             fecha: "2025-06-25"
         }
+        ,
+        {
+            id : 6,
+            nombre: "Diego",
+            tipo: "Jugador",
+            calificacion: 5,
+            titulo: "Experiencia",
+            comentario: "Formó parte de la categoría sub 15B la cual está en proceso formativo con el entreno Millán y estoy agradecido con él.",
+            recomendacion: "Sí",
+            fecha: "2025-07-08"
+        },
+        {
+            id : 7,
+            nombre: "Lenis Tenorio",
+            tipo: "Padre/Madre",
+            calificacion: 4,
+            titulo: "Desacuerdo",
+            comentario: "No estoy de acuerdo que a la categoría sub 15B no la tengan en cuenta y no la compartan en las páginas. Me gustaría más apoyo, hay niños que siguen en el fútbol por el esfuerzo económico como mi hijo. Me gustaría que le dieran una beca del 100% a Diego.",
+            recomendacion: "Sí",
+            fecha: "2025-07-08"
+        },
     ]
 };
