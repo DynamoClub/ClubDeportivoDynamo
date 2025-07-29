@@ -160,4 +160,184 @@ const noticiasData = [
   "image": "./public/img/noticias/inscripciones_abiertas_dynamo.jpg",
   "content": "🔥⚽ ¡INSCRIPCIONES ABIERTAS! ⚽🔥\n\nSEDE: Ciudad Córdoba\nSEDE: Vegas de Comfandi\n\n¿Te apasiona el fútbol y quieres llevar tu talento al siguiente nivel? En Club Deportivo Dynamo te estamos buscando 💪\n\n🎯 Entrenamientos profesionales\n👟 Formación desde los más pequeños hasta categorías mayores\n🌟 Ambientes seguros, motivadores y de alto rendimiento\n🏆 Participación en torneos y competencias nacionales e internacionales.\n\n👉 <a href=\"https://wa.me/573126723778?text=Hola%2C%20me%20gustaría%20saber%20el%20proceso%20de%20inscribir%20a%20mi%20niño.\" target=\"_blank\">Haz clic aquí para escribirnos por WhatsApp</a>\n\n📑 O si lo prefieres, visita nuestra página web y llena el formulario en la sección de contacto para que uno de nuestros asesores se comunique contigo.\n\n📸 Diseñador: @jsphotoograph\n\n#formandograndespromesas 🧡🖤 #dynamoespasión #FútbolConPropósito #InscripcionesAbiertas #clubdynamo #SueñaJuegaGana #publicidad #futbol"
 },
+  {
+  "id": "17",
+  "title": "Dylan Bonilla rumbo al Nacional Sub-17 🇨🇴🔥",
+  "url": "dylan-bonilla-nacional-sub17-12-julio-2025",
+  "date": "2025-07-12",
+  "category": "General",
+  "description": "Nuestro canterano Dylan Bonilla, categoría 2008, representará a Alianza Valledupar en la segunda ronda del Torneo Nacional Sub-17.",
+  "image": "./public/img/noticias/dylan_bonilla_nacional_sub17.jpg",
+  "content": "¡𝗢𝗿𝗴𝘂𝗹𝗹𝗼 𝗗𝘆𝗻𝗮𝗺𝗼! 🧡🖤\n\nNuestro jugador Dylan Bonilla, categoría 2008, actualmente en Alianza Valledupar, se alista para disputar la segunda ronda del Torneo Nacional Sub-17, donde enfrentará al Junior de Barranquilla.\n\n🔥 Nos llena de orgullo ver tu crecimiento deportivo, ¡vamos con toda!\n\n📍 Fecha: 12 de julio de 2025\n\n#formandopromesas @divisionesmenoresalianzafc"
+},
+{
+  "id": "18",
+  "title": "Bienvenida a Jerónimo Baquero 🎉",
+  "url": "bienvenida-jeronimo-baquero-12-julio-2025",
+  "date": "2025-07-12",
+  "category": "evento",
+  "description": "El Club Deportivo Dynamo le da la bienvenida a Jerónimo Baquero, nuevo DT asistente de la categoría Sub-07.",
+  "image": "./public/img/noticias/jeronimo_baquero_bienvenida.jpg",
+  "content": "¡𝗕𝗜𝗘𝗡𝗩𝗘𝗡𝗜𝗗𝗢 𝗣𝗥𝗢𝗙𝗘! 🧡🖤\n\nEn el Club Dynamo no solo formamos futbolistas, formamos personas, líderes y soñadores.\n\nNos caracterizamos por marcar la diferencia dentro y fuera de la cancha, y una de nuestras mayores fortalezas es abrirle las puertas a las nuevas generaciones que llegan con pasión, compromiso y ganas de construir futuro.\n\nSabemos que serás parte fundamental en el crecimiento de nuestros deportistas. ¡Éxitos en esta etapa!\n\n#formandograndespromesas"
+},
+{
+  "id": "19",
+  "title": "Cristian Espinoza, nuevo formador Dynamo 🎉",
+  "url": "cristian-espinoza-formador-sub09-13-julio-2025",
+  "date": "2025-07-13",
+  "category": "evento",
+  "description": "Cristian Espinoza se une como DT de la categoría Sub-09B. Un joven apasionado por el deporte y la formación.",
+  "image": "./public/img/noticias/cristian_espinoza_sub09b.jpg",
+  "content": "¡𝗗𝗬𝗡𝗔𝗠𝗢, 𝗦𝗘𝗠𝗜𝗟𝗟𝗘𝗥𝗢 𝗗𝗘 𝗚𝗥𝗔𝗡𝗗𝗘𝗦 𝗙𝗢𝗥𝗠𝗔𝗗𝗢𝗥𝗘𝗦! 🧡🖤\n\nCristian Espinoza se suma al equipo como DT de la categoría Sub-09B, aportando su entusiasmo, conocimiento y compromiso con la formación deportiva.\n\nEn el Club Dynamo seguimos apostando por la nueva generación, brindando oportunidades a formadores apasionados para que crezcan, se preparen y se conviertan en líderes que transformen vidas a través del fútbol.\n\n📅 13 de julio de 2025\n\n#formandopromesas #formandolideres"
+},
+{
+  "id": "20",
+  "title": "Santiago Vivanco se une al cuerpo técnico Dynamo 🎉",
+  "url": "santiago-vivanco-formador-sub10-13-julio-2025",
+  "date": "2025-07-13",
+  "category": "evento",
+  "description": "Santiago Vivanco, profesional en deporte, se une como DT de la categoría Sub-10/07 del Club Deportivo Dynamo.",
+  "image": "./public/img/noticias/santiago_vivanco_sub10_07.jpg",
+  "content": "¡𝗗𝗬𝗡𝗔𝗠𝗢, 𝗦𝗘𝗠𝗜𝗟𝗟𝗘𝗥𝗢 𝗗𝗘 𝗙𝗢𝗥𝗠𝗔𝗗𝗢𝗥𝗘𝗦! 🧡🖤\n\nDamos la bienvenida a Santiago Vivanco, nuevo entrenador de la categoría Sub-10/07, quien con su formación profesional y pasión por el deporte, contribuirá al desarrollo integral de nuestros futbolistas.\n\nEn Dynamo no solo formamos jugadores: formamos personas, educadores y líderes comprometidos con el cambio.\n\n📅 13 de julio de 2025\n\n#formandopromesas #formandolideres"
+},
+{
+  "id": "21",
+  "title": "Willinton Rentería, nuevo DT asistente Sub-10 🎉",
+  "url": "willinton-renteria-asistente-sub10-13-julio-2025",
+  "date": "2025-07-13",
+  "category": "evento",
+  "description": "Willinton Rentería se une como DT asistente de la categoría Sub-10, con estudios en especialidad deportiva y recreativa.",
+  "image": "./public/img/noticias/willinton_renteria_sub10.jpg",
+  "content": "¡𝗗𝗬𝗡𝗔𝗠𝗢, 𝗦𝗘𝗠𝗜𝗟𝗟𝗘𝗥𝗢 𝗗𝗘 𝗙𝗢𝗥𝗠𝗔𝗗𝗢𝗥𝗘𝗦! 🧡🖤\n\nLe damos la bienvenida a Willinton Rentería, nuevo DT asistente de la Sub-10, un formador comprometido con el deporte y la educación de nuestros talentos.\n\nEn el Club Dynamo seguimos creciendo con personas que inspiran. Aquí no solo formamos futbolistas: formamos formadores para la vida y el deporte.\n\n📅 13 de julio de 2025\n\n#formandopromesas #formandolideres"
+},
+{
+  "id": "22",
+  "title": "Sub-9A clasificada a la Segunda Fase 🏆",
+  "url": "sub-9a-clasificada-copa-bonbonbum-14-julio-2025",
+  "date": "2025-07-15",
+  "category": "torneo",
+  "description": "Nuestra Sub-9A avanza a la segunda fase de la Copa Bon Bon Bum, compitiendo contra equipos Sub-10.",
+  "image": "./public/img/noticias/sub9a_copa_bonbonbum_fase2.jpg",
+  "content": "¡¡𝗗𝗨𝗟𝗖𝗘 𝗦𝗘𝗚𝗨𝗡𝗗𝗔 𝗙𝗔𝗦𝗘!! 🍭⚽\n\nNuestra categoría Sub-9A ha logrado clasificarse a la segunda fase de la Copa más dulce de Cali: la Copa Bon Bon Bum, torneo en el que compiten un año por debajo enfrentando a equipos categoría 2015 (Sub-10).\n\n💪 A seguir demostrando garra y corazón en este nuevo reto.\n\n📋 Equipos del cuadrangular:\n- Carlos Sarmiento Lora\n- Academia Sporting\n- Deportivo Cali\n- Dynamo\n\n📸 Diseñador: @jsphotoograph\n\n📅 14 de julio de 2025\n\n#formandopromesas #copaBonBonBum @bonbonbumoficial"
+},
+{
+  "id": "23",
+  "title": "Sub-14 Elite | Victoria en Liga Vallecaucana ⚽",
+  "url": "sub-14-elite-liga-vallecaucana-15-julio-2025",
+  "date": "2025-07-15",
+  "category": "partido",
+  "description": "Nuestra Sub-14 Elite se impuso con jerarquía en la Liga Vallecaucana ante Juventud. ¡Otro paso firme del equipo!",
+  "image": "./public/img/noticias/sub14_elite_vs_juventud.jpg",
+  "content": "𝗥𝗘𝗦𝗨𝗟𝗧𝗔𝗗𝗢𝗦 𝗟𝗜𝗚𝗔 𝗩𝗔𝗟𝗟𝗘𝗖𝗔𝗨𝗖𝗔𝗡𝗔 ⚽🔥\n\nLa categoría Sub-14 Elite del Club Deportivo Dynamo logró una gran victoria frente al club Juventud, demostrando una vez más carácter y compromiso dentro del campo.\n\n🏆 Resultado: Dynamo 2️⃣ - 0️⃣ Juventud\n\n⚽ Goleadores:\n- Samuel Carabalí ⚽\n- Juan Betan ⚽\n\n📋 DT: Oscar Aaron Lucumí\n📸 Diseñador: @jsphotoograph\n📅 15 de julio de 2025\n\n#formandograndespromesas 🧡🖤\n#Festival\n#LigaVallecaucana"
+},
+{
+  "id": "24",
+  "title": "Sub-7A | Festival de Fútbol ⚽ ¡Victoria!",
+  "url": "sub-7a-victoria-festival-15-julio-2025",
+  "date": "2025-07-15",
+  "category": "partido",
+  "description": "La categoría Sub-7A celebró una gran victoria en el Festival de Fútbol, demostrando entusiasmo, técnica y alegría.",
+  "image": "./public/img/noticias/sub7a_festival_victoria.jpg",
+  "content": "𝗩𝗜𝗖𝗧𝗢𝗥𝗜𝗔 | Sub-7A ⚽💥\n\nNuestro equipo Sub-7A logró una destacada victoria en el Festival de Fútbol organizado por @lifutbolvalle. Una jornada llena de sonrisas, goles y unión familiar, reflejando lo que somos dentro y fuera del campo. 🧡⚽\n\n🏆 Resultado: Dynamo 6️⃣ - 2️⃣ CRP\n\n⚽ Goleadores:\n- Matías Dangond ⚽⚽⚽\n- Matías Guerrero ⚽⚽\n- Emmanuel Corrales ⚽\n\n👨‍🏫 Formador: Santiago Vivanco\n📸 Diseñador: @jsphotoograph\n📅 15 de julio de 2025\n\n#formandograndespromesas\n#Festival\n#Sub7Dynamo"
+},
+{
+  "id": "25",
+  "title": "Destacado | Joan Felipe Zúñiga brilla en semifinal 🏆",
+  "url": "joan-zuñiga-semifinal-millonarios-19-julio-2025",
+  "date": "2025-07-19",
+  "category": "destacado",
+  "description": "Joan Felipe Zúñiga se destacó en la semifinal frente a Millonarios, siendo clave para clasificar a la final de la Copa Metropolitana.",
+  "image": "./public/img/noticias/joan_felipe_semifinal.jpg",
+  "content": "𝗗𝗘𝗦𝗧𝗔𝗖𝗔𝗗𝗔 𝗔𝗖𝗧𝗨𝗔𝗖𝗜Ó𝗡 | @feliipe_zuniiga 🧤⚽\n\nJoan Felipe Zúñiga se destacó en la semifinal frente a Millonarios, siendo pieza clave para que el equipo accediera a la gran final de la Copa Metropolitana. Su entrega, liderazgo y reflejos fueron fundamentales para este logro.\n\nNos llena de orgullo ver su constante crecimiento y proyección deportiva. 💪🧡\n\n📅 19 de julio de 2025\n\n#formandograndespromesas 🖤🧡\n#JoanFelipeZúñiga\n#CopaMetropolitana\n#Semifinal"
+},
+{
+  "id": "26",
+  "title": "Institucional | Celebramos nuestra historia y honramos nuestra tierra 🇨🇴",
+  "url": "dia-independencia-club-dinamo-21-julio-2025",
+  "date": "2025-07-21",
+  "category": "institucional",
+  "description": "El Club Deportivo Dinamo conmemora el Día de la Independencia de Colombia, honrando la valentía de quienes lucharon por la libertad.",
+  "image": "./public/img/noticias/independencia_colombia_2025.jpg",
+  "content": "𝗖𝗘𝗟𝗘𝗕𝗥𝗔𝗠𝗢𝗦 𝗡𝗨𝗘𝗦𝗧𝗥𝗔 𝗛𝗜𝗦𝗧𝗢𝗥𝗜𝗔, 𝗛𝗢𝗡𝗥𝗔𝗠𝗢𝗦 𝗡𝗨𝗘𝗦𝗧𝗥𝗔 𝗧𝗜𝗘𝗥𝗥𝗔 🇨🇴\n\nHoy celebramos la valentía, el coraje y la historia de un pueblo que luchó por su libertad.\n\nEn el Club Deportivo Dinamo, honramos nuestras raíces, nuestra tierra y a todos los que día a día construyen un mejor país con valores, esfuerzo y pasión.\n\n¡Feliz Día de la Independencia!\n¡Viva Colombia! 🇨🇴\n\n📅 21 de julio de 2025\n\n#IndependenciaColombia\n#ClubDinamo\n#OrgulloColombiano\n#21DeJulio\n#ValoresQueInspiran"
+},
+{
+  "id": "27",
+  "title": "Sub-6 | Goleada histórica en el Festival de Fútbol ⚽🔥",
+  "url": "sub-6-festival-goleada-22-julio-2025",
+  "date": "2025-07-22",
+  "category": "partido",
+  "description": "Nuestra Sub-6 logró un aplastante triunfo en el Festival de Fútbol, con un marcador de escándalo: ¡35-0!",
+  "image": "./public/img/noticias/sub6_festival_29jul.jpg",
+  "content": "𝗙𝗘𝗦𝗧𝗜𝗩𝗔𝗟 𝗗𝗘 𝗙Ú𝗧𝗕𝗢𝗟 | 𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶́𝗮 𝗦𝘂𝗯-𝟲 🧡⚽\n\nUna jornada memorable vivió nuestro equipo Sub-6, consiguiendo una goleada histórica: 35 - 0 frente a Real Sociedad. Más allá del resultado, fue una demostración de talento, alegría y amor por el fútbol.\n\n👟 Goleadores:\n- Samuel ⚽⚽⚽⚽⚽⚽⚽⚽\n- Keiner ⚽⚽\n- Thiago ⚽⚽\n- Valencia ⚽⚽⚽⚽⚽⚽⚽\n- Guerrero ⚽⚽⚽⚽⚽⚽⚽⚽⚽⚽⚽⚽\n\n📋 DT: Kevin\n📸 Diseñador: @jsphotoograph\n📅 29 de julio de 2025\n\n#formandograndespromesas 🧡🖤\n#Sub6\n#FestivalDeFútbol"
+},
+{
+  "id": "28",
+  "title": "Sub-11 | Victoria ajustada ante Boca Córdoba ⚽",
+  "url": "sub-11-festival-vs-boca-cordoba-22-julio-2025",
+  "date": "2025-07-22",
+  "category": "partido",
+  "description": "Gran resultado para la Sub-11 del Club Dynamo, que se impuso 2-1 ante Boca Córdoba en una intensa jornada del Festival de Fútbol.",
+  "image": "./public/img/noticias/sub11_festival_29jul.jpg",
+  "content": "𝗙𝗘𝗦𝗧𝗜𝗩𝗔𝗟 𝗗𝗘 𝗙Ú𝗧𝗕𝗢𝗟 | 𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶́𝗮 𝗦𝘂𝗯-𝟭𝟭 🧡⚽\n\nNuestra categoría Sub-11 demostró carácter y trabajo en equipo para vencer 2️⃣ - 1️⃣ a Boca Córdoba. ¡Una victoria con sabor a esfuerzo colectivo!\n\n⚽ Goleadores:\n- Sterling Palacios ⚽\n- Samuel Cardona ⚽\n\n📋 DT: Kevin\n📸 Diseñador: @jsphotoograph\n📅 29 de julio de 2025\n\n#formandograndespromesas 🧡🖤\n#Sub11\n#FestivalDeFútbol"
+},
+{
+  "id": "29",
+  "title": "Sub-9 | Victoria contundente frente a RC ⚽💪",
+  "url": "sub-9-festival-vs-rc-22-julio-2025",
+  "date": "2025-07-22",
+  "category": "partido",
+  "description": "La categoría Sub-9 sigue demostrando su poderío y venció por un sólido 5-1 al club RC en el Festival de Fútbol.",
+  "image": "./public/img/noticias/sub9_festival_29jul.jpg",
+  "content": "𝗙𝗘𝗦𝗧𝗜𝗩𝗔𝗟 𝗗𝗘 𝗙Ú𝗧𝗕𝗢𝗟 | 𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶́𝗮 𝗦𝘂𝗯-𝟵 🧡⚽\n\nUn partido lleno de energía y entrega dejó como resultado una gran victoria para nuestra Sub-9, que venció 5️⃣ - 1️⃣ al club RC. ¡Seguimos creciendo con cada partido!\n\n⚽ Goleadores:\n- Jeremy ⚽⚽\n- Cantillo ⚽\n- Balantá ⚽\n- Santiago ⚽\n\n📋 DT: Kevin\n📸 Diseñador: @jsphotoograph\n📅 29 de julio de 2025\n\n#formandograndespromesas 🧡🖤\n#Sub9\n#FestivalDeFútbol"
+},
+{
+  "id": "30",
+  "title": "Sub-15B | Triunfo trabajado ante Real Independiente 🔥",
+  "url": "sub-15b-vs-real-independiente-22-julio-2025",
+  "date": "2025-07-22",
+  "category": "partido",
+  "description": "En un partido vibrante, la Sub-15B de Dynamo venció 5-3 a Real Independiente demostrando carácter y goles.",
+  "image": "./public/img/noticias/sub15b_festival_29jul.jpg",
+  "content": "�_L𝗜𝗚𝗔 𝗩𝗔𝗟𝗟𝗘𝗖𝗔𝗨𝗖𝗔𝗡𝗔 | 𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶́𝗮 𝗦𝘂𝗯-𝟭𝟱𝗕 ⚽🔥\n\nNuestra Sub-15B logró una gran victoria en un encuentro lleno de emociones frente al club Real Independiente: 5️⃣ - 3️⃣ fue el resultado final.\n\n⚽ Goleadores:\n- Deivi Valencia ⚽\n- Juan Guiza ⚽\n- Juan Riascos ⚽\n- Camilo Fonseca ⚽\n\n📋 DT: Kevin\n📸 Diseñador: @jsphotoograph\n📅 29 de julio de 2025\n\n#formandograndespromesas 🧡🖤\n#Sub15B\n#LigaVallecaucana"
+},
+{
+  "id": "31",
+  "title": "Johan Zúñiga | Campeón Sub-20 Especial con Santa Fe 🏆",
+  "url": "johan-zuniga-campeon-sub20-santafe-24-julio-2025",
+  "date": "2025-07-24",
+  "category": "Evento",
+  "description": "Nuestra promesa Johan Felipe Zúñiga se consagró campeón con Santa Fe en la categoría Sub-20 Especial. ¡Orgullo Dynamo!",
+  "image": "./public/img/noticias/johan_zuniga_sub20_campeon.jpg",
+  "content": "𝗖𝗔𝗠𝗣𝗘Ó𝗡 𝗨-𝟮𝟬 𝗘𝗦𝗣𝗘𝗖𝗜𝗔𝗟 🏆\n\nNuestra promesa Johan Felipe Zúñiga se coronó campeón con el club Santa Fe en la **categoría Sub-20 Especial**. Un logro que demuestra su talento, esfuerzo y dedicación dentro y fuera de la cancha.\n\nFelicitaciones crack, seguimos creyendo en ti. ¡El futuro es tuyo!\n\n📍 Club actual: Santa Fe\n🙌 Apoyo: @soldeorientereal\n📅 24 de julio de 2025\n📸 Diseñador: @jsphotoograph\n\n#formandograndespromesas 🧡🖤\n#OrgulloDynamo\n#Sub20Especial"
+},
+{
+  "id": "32",
+  "title": "Sub-13 | Gran triunfo frente a la Academia Deportivo Cali 🟠⚽",
+  "url": "sub-13-vs-academia-cali-26-julio-2025",
+  "date": "2025-07-26",
+  "category": "partido",
+  "description": "En un partidazo lleno de emociones, nuestra Sub-13 superó 4-3 a la Academia Deportivo Cali en la Liga Vallecaucana.",
+  "image": "./public/img/noticias/sub13_vs_academia_cali_26jul.jpg",
+  "content": "PITAZO FINAL | SUB-13\n\nEn un emocionante encuentro por la Liga Vallecaucana, el equipo Sub-13 del Club Deportivo Dynamo logró una valiosa victoria **4 - 3** frente a la Academia Deportivo Cali. Un resultado que refleja el esfuerzo, la entrega y el talento de nuestros jugadores.\n\nGoleadores:\n- Timarán ⚽⚽\n- Cundumi ⚽⚽\n\n📍 Rival: Academia Deportivo Cali\n📅 26 de julio de 2025\n📸 Diseñador: @jsphotoograph\n\n#formandograndespromesas 🧡🖤\n#Sub13\n#LigaVallecaucana"
+},
+{
+  "id": "33",
+  "title": "Sub-15B | Segunda victoria en la semana ante Academia Deportivo Cali ⚔️",
+  "url": "sub-15b-vs-academia-cali-26-julio-2025",
+  "date": "2025-07-26",
+  "category": "partido",
+  "description": "Nueva victoria para la Sub-15B de Dynamo, que esta vez superó 3-2 a Academia Deportivo Cali en otro vibrante duelo.",
+  "image": "./public/img/noticias/sub15b_vs_academia_cali_26jul.jpg",
+  "content": "PITAZO FINAL | SUB-15B\n\nOtra gran jornada para nuestra Sub-15B, que logró un triunfo muy disputado por **3 - 2** frente a la Academia Deportivo Cali en la Liga Vallecaucana. El equipo mostró garra y determinación durante todo el partido.\n\nGoleadores:\n- Jhon Deivi ⚽⚽\n- Miguel Sandoval ⚽\n\n📍 Rival: Academia Deportivo Cali\n📅 26 de julio de 2025\n📸 Diseñador: @jsphotoograph\n\n#formandograndespromesas 🧡🖤\n#Sub15B\n#LigaVallecaucana"
+},
+{
+  "id": "34",
+  "title": "Sede Vegas de Comfandi | Más que una cancha, una familia 🧡🖤",
+  "url": "sede-vegas-comfandi-club-dynamo-26-julio-2025",
+  "date": "2025-07-27",
+  "category": "institucional",
+  "description": "Te presentamos nuestra sede en el barrio Vegas de Comfandi, donde más de 160 jóvenes viven el fútbol con pasión y formación integral.",
+  "image": "./public/img/noticias/sede_vegas_comfandi_26jul.jpg",
+  "content": "¿𝗦𝗔𝗕Í𝗔𝗦 𝗤𝗨𝗘 𝗘𝗟 𝗖𝗟𝗨𝗕 𝗗𝗘𝗣𝗢𝗥𝗧𝗜𝗩𝗢 𝗗𝗬𝗡𝗔𝗠𝗢 𝗖𝗨𝗘𝗡𝗧𝗔 𝗖𝗢𝗡 𝟮 𝗦𝗘𝗗𝗘𝗦 𝗗𝗘𝗣𝗢𝗥𝗧𝗜𝗩𝗔𝗦?\n\nHoy te damos la bienvenida a nuestra sede ubicada en el barrio **Vegas de Comfandi**, al sur de la ciudad. En este espacio se forman más de **160 deportistas** distribuidos en **6 categorías**, guiados por un staff técnico altamente capacitado y comprometido con los valores del club.\n\n🧡 Formamos con disciplina, pasión y herramientas para el desarrollo deportivo.\n🖤 Creemos en construir seres humanos con valores, más allá del resultado.\n\nNo buscamos ser los mejores... buscamos ser inolvidables. \n\nClub Deportivo Dynamo: alma & corazón.\n\n📍 Barrio Vegas de Comfandi, Cali\n📅 26 de julio de 2025\n📸 Diseñador: @jsphotoograph\n\n#formandograndespromesas 🧡🖤\n#FamiliaDynamo\n#SedeVegasComfandi"
+}
 ];
