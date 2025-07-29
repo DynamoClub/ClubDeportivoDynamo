@@ -1007,10 +1007,3 @@
   font-weight: 600;
 }
 
-/* Fallback para navegadores que no soportan background-clip */
-@supports not (-webkit-background-clip: text) {
-  .historia-imagen-caption b {
-    color: var(--primary-orange);
-    background: none;
-  }
-}
