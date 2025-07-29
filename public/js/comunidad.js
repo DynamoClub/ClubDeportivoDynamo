@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
     crearIframeOculto();
-    inicializarReseñas(); // Cambio: función separada para inicializar
+    inicializarReseñas();
     verificarCookieResena();
     inicializarEventos();
 });
 
-// FUNCIÓN NUEVA: Inicializar reseñas solo una vez
+// FUNCIÓN: Inicializar reseñas solo una vez
 function inicializarReseñas() {
     const cargando = document.getElementById('cargando');
     
@@ -49,6 +49,9 @@ function inicializarReseñas() {
         todasLasReseñas = reseñasData.reseñas.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
         totalPaginas = Math.ceil(todasLasReseñas.length / RESEÑAS_POR_PAGINA);
         
+        // Asegurar que la página actual esté dentro del rango válido
+        paginaActual = Math.max(1, Math.min(paginaActual, totalPaginas));
+        
         // Mostrar primera página
         mostrarReseñasPaginadas();
         
@@ -59,13 +62,17 @@ function inicializarReseñas() {
     }, 800);
 }
 
-// FUNCIÓN CORREGIDA: Solo actualizar la visualización de reseñas
+// FUNCIÓN: Solo actualizar la visualización de reseñas
 function mostrarReseñasPaginadas() {
     const contenedor = document.getElementById('reseñas-contenedor');
     if (!contenedor) {
         console.error('Contenedor de reseñas no encontrado');
         return;
     }
+
+    // Validar que la página actual esté en el rango correcto
+    if (paginaActual < 1) paginaActual = 1;
+    if (paginaActual > totalPaginas) paginaActual = totalPaginas;
 
     const inicio = (paginaActual - 1) * RESEÑAS_POR_PAGINA;
     const fin = inicio + RESEÑAS_POR_PAGINA;
@@ -100,7 +107,7 @@ function mostrarReseñasPaginadas() {
     }
 }
 
-// FUNCIÓN CORREGIDA: Actualizar solo los controles
+// FUNCIÓN: Actualizar solo los controles
 function actualizarControlesPaginacion() {
     const btnAnterior = document.getElementById('btn-anterior');
     const btnSiguiente = document.getElementById('btn-siguiente');
@@ -129,19 +136,37 @@ function mostrarControlesPaginacion() {
     actualizarControlesPaginacion();
 }
 
-// FUNCIÓN CORREGIDA: Cambiar página sin recargar todo
+// FUNCIÓN CORREGIDA: Cambiar página correctamente con debounce
+let cambiandoPagina = false;
+
 function cambiarPagina(direccion) {
-    const nuevaPagina = paginaActual + direccion;
-    
-    // Validar límites
-    if (nuevaPagina < 1 || nuevaPagina > totalPaginas) {
+    // Prevenir ejecuciones múltiples
+    if (cambiandoPagina) {
+        console.log('Cambio de página ya en proceso, ignorando...');
         return;
     }
     
-    // Actualizar página actual
+    cambiandoPagina = true;
+    console.log(`Página actual antes: ${paginaActual}, Dirección: ${direccion}`);
+    
+    // Calcular la nueva página
+    const nuevaPagina = paginaActual + direccion;
+    
+    console.log(`Nueva página calculada: ${nuevaPagina}, Total páginas: ${totalPaginas}`);
+    
+    // Validar límites estrictos
+    if (nuevaPagina < 1 || nuevaPagina > totalPaginas) {
+        console.log('Página fuera del rango válido, cancelando cambio');
+        cambiandoPagina = false;
+        return;
+    }
+    
+    // Actualizar página actual solo si está en el rango válido
     paginaActual = nuevaPagina;
     
-    // Solo actualizar la visualización, no recargar todo
+    console.log(`Página actual después: ${paginaActual}`);
+    
+    // Solo actualizar la visualización
     mostrarReseñasPaginadas();
     
     // Scroll suave a las reseñas
@@ -149,12 +174,49 @@ function cambiarPagina(direccion) {
     if (reseñasSection) {
         reseñasSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    
+    // Liberar el bloqueo después de un pequeño delay
+    setTimeout(() => {
+        cambiandoPagina = false;
+    }, 300);
 }
 
-// FUNCIÓN OBSOLETA: Eliminar cargarReseñas() ya que ahora usamos inicializarReseñas()
-// La función cargarReseñas() causaba el problema al reinicializar todo cada vez
+// FUNCIÓN ALTERNATIVA: Ir directamente a una página específica
+function irAPagina(numeroPagina) {
+    // Prevenir ejecuciones múltiples
+    if (cambiandoPagina) {
+        console.log('Cambio de página ya en proceso, ignorando irAPagina...');
+        return;
+    }
+    
+    console.log(`Ir a página: ${numeroPagina}`);
+    
+    // Validar que el número de página esté en el rango válido
+    if (numeroPagina < 1 || numeroPagina > totalPaginas) {
+        console.log('Número de página inválido');
+        return;
+    }
+    
+    cambiandoPagina = true;
+    
+    // Actualizar página actual
+    paginaActual = numeroPagina;
+    
+    // Actualizar visualización
+    mostrarReseñasPaginadas();
+    
+    // Scroll suave a las reseñas
+    const reseñasSection = document.querySelector('.reseñas');
+    if (reseñasSection) {
+        reseñasSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    
+    // Liberar el bloqueo después de un pequeño delay
+    setTimeout(() => {
+        cambiandoPagina = false;
+    }, 300);
+}
 
-// Resto de funciones sin cambios importantes...
 function crearIframeOculto() {
     const iframe = document.createElement('iframe');
     iframe.id = 'google-form-iframe';
@@ -251,24 +313,53 @@ function inicializarEventos() {
     const btnAnterior = document.getElementById('btn-anterior');
     const btnSiguiente = document.getElementById('btn-siguiente');
 
-    if (!estrellas.length || !form || !btnAnterior || !btnSiguiente) {
-        console.error('Elementos de eventos no encontrados');
+    if (!estrellas.length || !form) {
+        console.error('Elementos básicos no encontrados');
         return;
     }
 
+    // Eventos de las estrellas
     estrellas.forEach(estrella => {
         estrella.addEventListener('click', seleccionarCalificacion);
         estrella.addEventListener('mouseover', resaltarEstrellas);
     });
 
-    document.getElementById('estrellas-rating').addEventListener('mouseleave', () => {
-        actualizarVisualizacionEstrellas(calificacionSeleccionada);
-    });
+    const estrellasRating = document.getElementById('estrellas-rating');
+    if (estrellasRating) {
+        estrellasRating.addEventListener('mouseleave', () => {
+            actualizarVisualizacionEstrellas(calificacionSeleccionada);
+        });
+    }
 
+    // Evento del formulario
     form.addEventListener('submit', enviarResena);
 
-    btnAnterior.addEventListener('click', () => cambiarPagina(-1));
-    btnSiguiente.addEventListener('click', () => cambiarPagina(1));
+    // EVENTOS CORREGIDOS: Remover listeners anteriores y agregar nuevos
+    if (btnAnterior && btnSiguiente) {
+        // Remover listeners anteriores si existen
+        const nuevoAnterior = btnAnterior.cloneNode(true);
+        const nuevoSiguiente = btnSiguiente.cloneNode(true);
+        
+        btnAnterior.parentNode.replaceChild(nuevoAnterior, btnAnterior);
+        btnSiguiente.parentNode.replaceChild(nuevoSiguiente, btnSiguiente);
+        
+        // Agregar nuevos listeners
+        nuevoAnterior.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Click en botón anterior');
+            cambiarPagina(-1);
+        });
+        
+        nuevoSiguiente.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Click en botón siguiente');
+            cambiarPagina(1);
+        });
+    } else {
+        console.warn('Botones de paginación no encontrados durante inicialización');
+    }
 }
 
 function seleccionarCalificacion(e) {
@@ -454,5 +545,6 @@ function calcularTiempoTranscurrido(fecha) {
 
 // Exportar funciones globales
 window.cambiarPagina = cambiarPagina;
+window.irAPagina = irAPagina;
 window.mostrarFormulario = mostrarFormulario;
 window.resetearFormulario = resetearFormulario;
